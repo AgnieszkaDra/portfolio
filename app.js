@@ -96,3 +96,16 @@ function switchTheme(event){
 
 //Event Listener
 toogleSwitch.addEventListener('change', switchTheme)
+
+
+    const mql = window.matchMedia("(max-width: 768px)");
+  const toogleIcon = this.document.querySelector('#toggle-icon')
+ 
+ if(mql.matches){
+  
+  toogleIcon.style.display='none'
+
+  
+
+
+ } 
