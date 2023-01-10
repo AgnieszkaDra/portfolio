@@ -5,6 +5,7 @@ const allSections = document.querySelector('.main-content')
 const toggleIcon = document.getElementById('toggle-icon')
 console.log(toggleIcon.children)
 const textBox = document.getElementById('text-box')
+const portfolioLink = document.querySelector('.portfolio-link')
 
 function PageTransitions() {
     // Button click active class
@@ -36,19 +37,31 @@ function PageTransitions() {
         }
     })
 
-    //Toggle theme
-//     const themeBtn = document.querySelector('.theme-btn')
-//     themeBtn.addEventListener('click', ()=>{
-//         let element = document.documentElement
-//         console.log(element)
-//         document.documentElement.setAttribute('data-theme', 'light')
-//         //element.classList.toggle('light-mode')
-//     })
-// }
-
+  
 }
 
 PageTransitions()
+
+function forwardPage(e){
+    const id = e.target;
+    const page = document.querySelector('#portfolios')
+    const parentPage = page.parentElement
+    const controlPage = document.querySelector('[data-id="portfolio"]')
+    const controlId = document.querySelector('[data-id="home"]')
+    
+    if(id) {
+        
+        controlId.classList.remove('active-btn')
+        controlPage.classList.add('active-btn')
+
+        parentPage.classList.add('active')
+    }
+      
+}
+
+
+
+portfolioLink.addEventListener('click', forwardPage)
 
 const toogleSwitch = document.querySelector('input[type="checkbox"]')
 
