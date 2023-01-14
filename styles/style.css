@@ -849,10 +849,26 @@ input:checked + .slider::before {
     padding-right: 0;
   }
   .about-container .left-about h4 {
+    font-size: 1rem;
     text-align: center;
   }
   .about-container .left-about p {
     padding-left: 0;
+    text-align: justify;
+  }
+  .about-container .left-about .btn-con {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  .about-container .right-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .about-container .right-about .about-item {
+    width: 90%;
   }
   .timeline {
     grid-template-columns: 1fr;
