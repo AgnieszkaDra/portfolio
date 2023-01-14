@@ -812,7 +812,7 @@ input:checked + .slider::before {
   .sec1 {
     padding: 0.5rem;
   }
-  .sec2 {
+  .sec2, .sec3 {
     padding-top: 0;
     padding-bottom: 0;
     padding-right: 4rem;
@@ -840,6 +840,10 @@ input:checked + .slider::before {
   }
   .about-container {
     grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .about-container .right-about {
     grid-template-columns: 1fr;
@@ -856,28 +860,29 @@ input:checked + .slider::before {
     padding-left: 0;
     text-align: justify;
   }
+  .about-container .left-about .about-item {
+    width: 90%;
+  }
   .about-container .left-about .btn-con {
     display: flex;
     justify-content: center;
     align-self: center;
   }
-  .about-container .right-about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  .about-container .left-about .about-stats .progress-bars {
+    grid-template-columns: 1fr;
   }
-  .about-container .right-about .about-item {
-    width: 90%;
-  }
-  .timeline {
+  .about-container .left-about .timeline {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
     margin-left: 1rem;
   }
-  .timeline .timeline-item .tl-icon {
+  .about-container .left-about .timeline .timeline-item .tl-icon {
     position: absolute;
     left: -20px;
+  }
+  .portfolios {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
   }
   .theme-switch {
     display: inline-block;
