@@ -812,7 +812,7 @@ input:checked + .slider::before {
   .sec1 {
     padding: 0.5rem;
   }
-  .sec2, .sec3, .sec4 {
+  .sec2, .sec3, .sec4, .sec5 {
     padding-top: 0;
     padding-bottom: 0;
     padding-right: 4rem;
@@ -854,7 +854,6 @@ input:checked + .slider::before {
   }
   .about-container .left-about h4 {
     font-size: 1rem;
-    text-align: center;
   }
   .about-container .left-about p {
     padding-left: 0;
@@ -887,6 +886,23 @@ input:checked + .slider::before {
   .blogs {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
+  }
+  .contact-content-con {
+    flex-direction: column;
+  }
+  .contact-content-con .right-contact {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
+  .contact-content-con .left-contact h4 {
+    font-size: 1rem;
+  }
+  .contact-content-con .right-contact .i-ctrl-2 {
+    flex-direction: column;
+  }
+  .contact-content-con .right-contact .i-ctrl-2 :last-child {
+    margin-left: 0 !important;
+    margin-top: 1.5rem;
   }
   .theme-switch {
     display: inline-block;
