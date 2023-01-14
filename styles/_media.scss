@@ -13,13 +13,13 @@
    
    
     .header-content {
+        display: grid;
         grid-template-columns: 1fr;
         padding: 2rem;
         overflow: scroll;
 
         .right-header {
             grid-row: 1;
-            width: 90%;
             margin: 0 auto;
             .name {
                 font-size: 2rem !important;
@@ -50,6 +50,7 @@
     }
 
     .about-container{
+        display: grid;
         grid-template-columns: 1fr;
         @include flex();
         flex-direction: column;
@@ -79,11 +80,13 @@
             }
             .about-stats{
                 .progress-bars{
+                    display: grid;
                     grid-template-columns: 1fr;
                 }
             }
 
             .timeline{
+                display: grid;
                 grid-template-columns: 1fr;
                 padding-bottom: 6rem;
                 margin-left: 1rem;
@@ -97,11 +100,13 @@
     }
 
     .portfolios{
+        display: grid;
         grid-template-columns: 1fr;
         padding-bottom: 6rem;
     }
 
     .blogs{
+        display: grid;
         grid-template-columns: 1fr;
         padding-bottom: 6rem;
     }
@@ -175,9 +180,64 @@
         }
     }
 
-
-
 }
+
+@media(min-width: 769px) {
+    .sec1{
+        padding: 0.5rem;
+    }
+    .sec2, .sec3, .sec4, .sec5 {
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-right: 4rem;
+        padding-left: 0.5rem;
+        }
+       
+    .header-content {
+        display: grid;
+            
+            
+            grid-template-columns: none;;
+            padding: 2rem;
+            overflow: scroll;
+            .right-header{
+              @include flex();
+              padding-right: 5rem;
+              .btn-con {
+                display: flex;
+                align-self: initial;
+            }
+            }
+            .left-header {
+               padding-right: 5rem;
+            .h-shape {
+                display: none;
+                }
+                        
+            .image {
+                height: 70%;
+                width: 70%;
+              
+                
+    
+              
+                }
+            }
+        }
+        .controlls {
+            .control{
+                width: 80px;
+                height: 80px;
+                margin: 2rem 0;
+            }
+        }
+
+   
+    
+        
+           
+        }
+
 
 // @media screen and (max-width: 1432px) {
 //     header {

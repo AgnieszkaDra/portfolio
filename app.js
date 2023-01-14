@@ -99,6 +99,7 @@ toogleSwitch.addEventListener('change', switchTheme)
 
 
     const mql = window.matchMedia("(max-width: 768px)");
+    const mqltablet = window.matchMedia("(min-width:768px)")
   const toogleIcon = this.document.querySelector('#toggle-icon')
  
  if(mql.matches){
@@ -108,4 +109,6 @@ toogleSwitch.addEventListener('change', switchTheme)
   
 
 
- } 
+ } else if(mqltablet.matches){
+    toogleIcon.style.display='block'
+ }

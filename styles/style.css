@@ -819,13 +819,13 @@ input:checked + .slider::before {
     padding-left: 0.5rem;
   }
   .header-content {
+    display: grid;
     grid-template-columns: 1fr;
     padding: 2rem;
     overflow: scroll;
   }
   .header-content .right-header {
     grid-row: 1;
-    width: 90%;
     margin: 0 auto;
   }
   .header-content .right-header .name {
@@ -839,6 +839,7 @@ input:checked + .slider::before {
     width: 90%;
   }
   .about-container {
+    display: grid;
     grid-template-columns: 1fr;
     display: flex;
     justify-content: center;
@@ -868,9 +869,11 @@ input:checked + .slider::before {
     align-self: center;
   }
   .about-container .left-about .about-stats .progress-bars {
+    display: grid;
     grid-template-columns: 1fr;
   }
   .about-container .left-about .timeline {
+    display: grid;
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
     margin-left: 1rem;
@@ -880,10 +883,12 @@ input:checked + .slider::before {
     left: -20px;
   }
   .portfolios {
+    display: grid;
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
   .blogs {
+    display: grid;
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
@@ -943,5 +948,47 @@ input:checked + .slider::before {
   .controlls .control {
     width: 45px;
     height: 45px;
+  }
+}
+@media (min-width: 769px) {
+  .sec1 {
+    padding: 0.5rem;
+  }
+  .sec2, .sec3, .sec4, .sec5 {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 4rem;
+    padding-left: 0.5rem;
+  }
+  .header-content {
+    display: grid;
+    grid-template-columns: none;
+    padding: 2rem;
+    overflow: scroll;
+  }
+  .header-content .right-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 5rem;
+  }
+  .header-content .right-header .btn-con {
+    display: flex;
+    align-self: initial;
+  }
+  .header-content .left-header {
+    padding-right: 5rem;
+  }
+  .header-content .left-header .h-shape {
+    display: none;
+  }
+  .header-content .left-header .image {
+    height: 70%;
+    width: 70%;
+  }
+  .controlls .control {
+    width: 80px;
+    height: 80px;
+    margin: 2rem 0;
   }
 }/*# sourceMappingURL=style.css.map */
