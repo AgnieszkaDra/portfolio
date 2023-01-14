@@ -812,7 +812,7 @@ input:checked + .slider::before {
   .sec1 {
     padding: 0.5rem;
   }
-  .sec2, .sec3 {
+  .sec2, .sec3, .sec4 {
     padding-top: 0;
     padding-bottom: 0;
     padding-right: 4rem;
@@ -881,6 +881,10 @@ input:checked + .slider::before {
     left: -20px;
   }
   .portfolios {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .blogs {
     grid-template-columns: 1fr;
     padding-bottom: 6rem;
   }
