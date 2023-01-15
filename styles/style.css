@@ -5,6 +5,10 @@
   list-style: none;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 :root {
   --color-primary: hsl(204, 70%, 54%) ;
   --color-secondary: #223c83;
@@ -49,9 +53,8 @@ a {
 }
 
 header {
-  height: 100vh;
   font-family: "Poppins", sans-serif;
-  color: --color-white;
+  color: var(--color-white);
   overflow: hidden;
 }
 
@@ -139,8 +142,8 @@ section {
   padding: 1rem;
   cursor: pointer;
   background-color: var(--color-grey4);
-  width: 55px;
-  height: 55px;
+  width: calc(5vh + 5px);
+  height: calc(5vh + 5px);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -181,7 +184,8 @@ section {
 .header-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  min-height: 100%;
+  overflow: visible;
+  margin-right: calc(2rem + 1vh);
 }
 .header-content .left-header {
   display: flex;
@@ -232,14 +236,26 @@ section {
   padding-right: 18rem;
 }
 .header-content .right-header .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 3rem;
 }
 .header-content .right-header .name span {
   color: --color-secondary;
 }
+.header-content .right-header .portfolio-link {
+  text-decoration: underline;
+}
 .header-content .right-header p {
   margin: 1.5rem 0;
   line-height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-content .right-header h2 {
+  text-align: center;
 }
 
 /*About*/
@@ -812,7 +828,10 @@ input:checked + .slider::before {
   .sec1 {
     padding: 0.5rem;
   }
-  .sec2, .sec3, .sec4, .sec5 {
+  .sec2,
+.sec3,
+.sec4,
+.sec5 {
     padding-top: 0;
     padding-bottom: 0;
     padding-right: 4rem;
@@ -821,15 +840,25 @@ input:checked + .slider::before {
   .header-content {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 2rem;
-    overflow: scroll;
+    margin-right: calc(2rem + 2vh);
+    min-height: 100vh;
   }
   .header-content .right-header {
     grid-row: 1;
     margin: 0 auto;
+    padding-right: 0;
   }
   .header-content .right-header .name {
-    font-size: 2rem !important;
+    font-size: calc(0.7rem + 1vh) !important;
+  }
+  .header-content .right-header h2 {
+    font-size: calc(0.5rem + 1vh);
+  }
+  .header-content .right-header p {
+    font-size: calc(0.4rem + 1vh);
+  }
+  .header-content .left-header {
+    padding-right: 0;
   }
   .header-content .left-header .h-shape {
     display: none;
@@ -945,32 +974,35 @@ input:checked + .slider::before {
     min-height: 500px;
     justify-content: space-between;
   }
-  .controlls .control {
-    width: 45px;
-    height: 45px;
-  }
 }
 @media (min-width: 769px) {
   .sec1 {
     padding: 0.5rem;
   }
-  .sec2, .sec3, .sec4, .sec5 {
-    padding-top: 0;
+  .sec2,
+.sec3,
+.sec4,
+.sec5 {
+    padding-top: 2rem;
     padding-bottom: 0;
-    padding-right: 4rem;
+    padding-right: 6rem;
     padding-left: 0.5rem;
+  }
+  .main-title h2 .bg-text {
+    display: none;
   }
   .header-content {
     display: grid;
     grid-template-columns: none;
+    grid-template-rows: 1fr 1.2fr;
     padding: 2rem;
     overflow: scroll;
   }
   .header-content .right-header {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-right: 5rem;
+    padding: 1rem 1rem 5rem 0;
+    height: 100vh;
   }
   .header-content .right-header .btn-con {
     display: flex;
@@ -986,9 +1018,51 @@ input:checked + .slider::before {
     height: 70%;
     width: 70%;
   }
-  .controlls .control {
-    width: 80px;
-    height: 80px;
-    margin: 2rem 0;
+}
+.about-container {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.about-container .left-about {
+  padding: 0;
+}
+.about-container .right-about {
+  align-self: flex-start;
+}
+.about-container .right-about .about-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 1000px) {
+  .sec1 {
+    padding: 0;
+  }
+  .header-content {
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .header-content .left-header .h-shape {
+    display: block;
+  }
+  .header-content .left-header .image {
+    height: 100%;
+    width: 100%;
+  }
+  .main-title h2 {
+    font-size: 6rem;
+  }
+  .main-title h2 .bg-text {
+    display: block;
+    top: 80%;
+    left: 70%;
+    font-size: 4.3rem;
+  }
+  .controlls {
+    right: 1%;
   }
 }/*# sourceMappingURL=style.css.map */

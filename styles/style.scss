@@ -5,6 +5,8 @@
     list-style: none;
 }
 
+html {overflow-y: scroll;}
+
 :root {
     --color-primary: hsl(204, 70%, 54%) ;
     --color-secondary: #223c83;
@@ -67,9 +69,9 @@ a {
 }
 
 header {
-    height: 100vh;
+    //height: 100vh;
     font-family: 'Poppins', sans-serif;
-    color: --color-white;
+    color: var(--color-white);
     overflow: hidden;
   
 }
@@ -137,6 +139,7 @@ section {
     z-index: 10;
     top: 50%;
     right: 3%;
+   
    @include flex();
     flex-direction: column;
     transform: translateY(-50%);
@@ -152,8 +155,8 @@ section {
         padding: 1rem;
         cursor: pointer;
         background-color: var(--color-grey4);
-        width: 55px;
-        height: 55px;
+        width: calc(5vh + 5px);
+        height: calc(5vh + 5px);
         border-radius: 50%;
         @include flex();
         margin: .7rem 0;
@@ -194,7 +197,9 @@ section {
 .header-content {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    min-height: 100%;
+    
+    overflow: visible;
+    margin-right: calc(2rem + 1vh);
     .left-header{
         display: flex;
         align-items: center;
@@ -203,6 +208,7 @@ section {
         width: 100%;
         height: 100%;
         padding-right: 18rem;
+       
         .h-shape {
             transition: $transition-main;
             width: 65%;
@@ -220,7 +226,6 @@ section {
             width: 78%;
             margin-left: 4rem;
             @include flex();
-            
             transition: $transition-main;
             img {
                 width: 90%;
@@ -231,12 +236,8 @@ section {
                 &:hover {
                     filter:greyscale(0%)
                 }
-                // background-image: url('/img/face.jpg');
-                // background-repeat: no-repeat;
-                // background-size: cover;
-                // height: 0;
-                // padding-bottom: calc( 3 / 4 * 100%);
-            }}
+                }
+            }
     }
         
     
@@ -246,14 +247,22 @@ section {
         justify-content: center;
         padding-right: 18rem;
         .name {
+            @include flex();
             font-size: 3rem;
             span{
                 color: --color-secondary
             }
         }
+        .portfolio-link{
+            text-decoration:underline;
+        }
         p{
             margin: 1.5rem 0;
             line-height: 2rem;
+            @include flex();
+        }
+        h2{
+            text-align: center;
         }
     }
 }
