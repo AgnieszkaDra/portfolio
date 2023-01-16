@@ -2,6 +2,7 @@ const sections = document.querySelectorAll('.section')
 const sectBtns = document.querySelectorAll('.controlls')
 const sectBtn = document.querySelectorAll('.control')
 const allSections = document.querySelector('.main-content')
+console.dir(allSections)
 const toggleIcon = document.getElementById('toggle-icon')
 console.log(toggleIcon.children)
 const textBox = document.getElementById('text-box')
@@ -17,18 +18,16 @@ function PageTransitions() {
         })
     }
 
-    //Sections Active class
-    allSections.addEventListener('click', (e)=> {
+   allSections.addEventListener('click', (e)=> {
         const id = e.target.dataset.id;
+        console.log(id)
        
         if(id) {
-            // remove selected from the other btns
-            sectBtns.forEach((btn) => {
+           sectBtns.forEach((btn) => {
                 btn.classList.remove('active')
             })
             e.target.classList.add('active')
 
-            // hide other sections
             sections.forEach((section) => {
                 section.classList.remove('active')
             })

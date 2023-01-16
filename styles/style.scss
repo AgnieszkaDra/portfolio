@@ -6,6 +6,7 @@ $transition-main: all .4s ease-in-out;
 };
 $box-shadow-1: 0 3px 15px rgba(0,0,0,0.3);
 $br-sm-2: 14px;
+
 header {
     color: var(--color-white);
     overflow: hidden;
@@ -17,42 +18,16 @@ section {
     position: absolute;
     left: 0;
     top: 0;
-    padding: 3rem 18rem;
+    //padding: 3rem 18rem;
 }
 
 .section {
-    transform: translateY(-100%) scale(0);
-    transition: $transition-main;
+    //transition: all 10s ease-in-out;
     background-color: var(--color-primary);
 }
 
-.sec1 {
+.sec1, .sec2, .sec3, .sec4, .sec5 {
     display: none;
-    transform: translateY(0) scale(1);
-   
-}
-
-.sec2 {
-    display: none;
-    transform: translateY(0) scale(1);
-   
-}
-
-.sec3 {
-    display: none;
-    transform: translateY(0) scale(1);
-    
-}
-
-.sec4 {
-    display: none;
-    transform: translateY(0) scale(1);
-   
-}
-
-.sec5 {
-    display: none;
-    transform: translateY(0) scale(1);
 }
 
 .active {
@@ -71,7 +46,7 @@ section {
 //Controls
 .controlls {
     position: fixed;
-    z-index: 10;
+    //z-index: 10;
     top: 50%;
     right: 3%;
    
@@ -132,9 +107,9 @@ section {
 .header-content {
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    
+    min-height: 100vh;
     overflow: visible;
-    margin-right: calc(2rem + 1vh);
+    margin-right: calc(2rem + 3vh);
     .left-header{
         display: flex;
         align-items: center;
@@ -667,16 +642,20 @@ section {
         text-transform: uppercase;
         font-size: 4rem;
         font-size: 700;
+        
         span{
-            color: --color-secondary
+            color: var(--color-secondary);
+            z-index: 2;
+            position: relative;
         }
         .bg-text{
             position: absolute;
             top: 50%;
             left: 50%;
-            color: var(--color-grey5);
-            transition: $transition-main;
-            z-index: -1;
+            color: turquoise;
+           // color: var(--color-grey5);
+            //transition: $transition-main;
+            z-index: 1;
             transform: translate(-50%, -50%);
             font-weight: 800;
             font-size: 6.3rem;

@@ -26,14 +26,7 @@
     --color-grey6: #12181b;
 }
 
-$br-sm-2: 14px;
-$transition-main: all .4s ease-in-out;
-@mixin flex() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-};
-$box-shadow-1: 0 3px 15px rgba(0,0,0,0.3); 
+
 
 body {
     background-color: var(--color-primary);
