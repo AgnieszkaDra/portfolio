@@ -1,3 +1,5 @@
+$transition-main: all .4s ease-in-out;
+
 @media(max-width: 768px) {
     .sec1 {
         padding: 0.5rem;
@@ -34,9 +36,7 @@
             p{
                 font-size: calc(0.4rem + 1vh);
             }
-            .btn-con{
-
-            }
+           
         }
 
         .left-header {
@@ -210,26 +210,23 @@
 
     .header-content {
         display: grid;
-        grid-template-columns: none;
-        grid-template-rows: 1fr 1.2fr;
+        grid-template-columns: 1fr;
+        margin-right: calc(2rem + 2vh);
         padding: 2rem;
-        overflow: scroll;
-
+        min-height: 100vh;
         .right-header {
-            display: flex;
-            justify-content:center;
-            padding: 1rem 1rem 5rem 0;
-            height: 100vh;
-            
-            .btn-con {
-                display: flex;
-                align-self: initial;
-            }
+           padding: 1rem 1rem 5rem 0;
+        grid-row: 1;
+            justify-content: space-between;
+           .btn-con{
+            @include flex();
+            align-self: center;
+           }
         }
 
         .left-header {
             padding-right: 5rem;
-
+           
             .h-shape {
                 display: none;
             }
@@ -275,6 +272,7 @@
         padding: 0;
         display: grid;
         grid-template-columns: repeat(2,1fr);
+       
         .left-header {
             .h-shape {
                 display: block;
@@ -284,6 +282,10 @@
                 height: 100%;
                 width: 100%;
             }
+        }
+        .right-header{
+            grid-row: initial;
+            justify-content: center;
         }
     }
 
