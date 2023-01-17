@@ -67,10 +67,10 @@ $transition-main: all .4s ease-in-out;
         .left-about {
             padding-right: 0;
 
-            h4 {
-                font-size: 1rem;
+            // h4 {
+            //     //font-size: 1rem;
 
-            }
+            // }
 
             p {
                 padding-left: 0;
@@ -164,7 +164,7 @@ $transition-main: all .4s ease-in-out;
     .main-title {
         padding-top: 4rem;
         h2 {
-            font-size: 2rem;
+            //font-size: 2rem;
             span {
                 font-size: 2.5rem;
             }
@@ -246,9 +246,7 @@ $transition-main: all .4s ease-in-out;
 
     .about-container {
         margin: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
+      
 
         .left-about {
             padding: 0;
@@ -290,9 +288,9 @@ $transition-main: all .4s ease-in-out;
         }
     }
 
-    .main-title h2{
-        font-size: 6rem;
-    }
+    // .main-title h2{
+    //     //font-size: 6rem;
+    // }
     .main-title h2 .bg-text {
         
         top: 80%;
