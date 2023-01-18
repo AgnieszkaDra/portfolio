@@ -439,45 +439,70 @@ justify-content: flex-start;
 
         .skillsToday {
             display: grid;
-            grid-template-columns: 1fr;
-
+            grid-template-rows: repeat(2, 1fr);
+            margin-bottom: 1rem;
             .skillsTitle {
                 @include flex();
+                grid-row: 1;
             }
 
             .skillsContainer {
+                grid-row: 2;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
                 @include flex();
-                min-height: 100px;
+                //min-height: 100px;
 
-                div {
+                .data {
                    padding: 0.2rem;
-                   @include flex();
-                    min-height: 50%;
+                   //@include flex();
+                   
+                   display: grid;
+                   grid-template-rows: repeat(2,1fr);
+                    
                     flex-direction: column;
                     width: 60px;
                     height: 60px;
-
-                    div {
+                
+                    .name {
+                        @include flex();
+                        background-color: yellow;
+                        grid-row: 1;
+                        //flex-grow: 2;
                         padding: 0.2rem;
-
+                        //flex-basis: 50%;
+                        //grid-row: 1;;
+                        width: 30px;
+                        height: 30px;
+                    }
+                
+                     div {
+                        flex-basis: 50%;
+                        background-color: pink;
+                        width: 30px;
+                        height: 30px;
+                        grid-row: 2;
                         input {
-
+                           // grid-row: 2;
                             border: 2px solid red;
-                            width: 100%;
-                            height: 100%;
+                            width: 30px;
+                        height: 30px;
 
 
 
 
                         }
-
+                     }  
+                      
+                    }
                     }
                 }
+            }
 
             }
-        }
+        
 
-    }
+    
 
     .chartContainer {
         @include flex();
@@ -488,7 +513,7 @@ justify-content: flex-start;
             height: 300px;
         }
     }
-}
+
 
 
 
