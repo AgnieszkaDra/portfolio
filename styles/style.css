@@ -229,19 +229,25 @@ section {
   align-items: center;
   flex-direction: column;
 }
-.about-stats .progress-bars {
-  width: 100%;
+.about-stats div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
 }
-.about-stats .progress-bars .progress-bar {
-  margin-bottom: 1rem;
-}
-.about-stats .progress-bars .progress-bar div {
-  margin-bottom: 1rem;
-}
-.about-stats .progress-bars .progress-bar .html {
+.about-stats div .progress-bars {
   display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
 }
-.about-stats .progress-bars .progress-bar .html .progress-title {
+.about-stats div .progress-bars div {
+  margin-bottom: 1rem;
+}
+.about-stats div .progress-bars .html {
+  display: flex;
+  width: 100%;
+  height: 40px;
+}
+.about-stats div .progress-bars .html .progress-title {
   text-transform: uppercase;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
@@ -249,7 +255,7 @@ section {
   text-transform: translateY(180deg);
   font-weight: 500;
 }
-.about-stats .progress-bars .progress-bar .html .progress {
+.about-stats div .progress-bars .html .progress {
   width: 10%;
   height: 1rem;
   background-color: var(--color-grey4);
@@ -258,10 +264,12 @@ section {
   position: relative;
   border: 2px solid black;
 }
-.about-stats .progress-bars .progress-bar .css {
+.about-stats div .progress-bars .css {
   display: flex;
+  width: 100%;
+  height: 40px;
 }
-.about-stats .progress-bars .progress-bar .css .progress-title {
+.about-stats div .progress-bars .css .progress-title {
   text-transform: uppercase;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
@@ -269,7 +277,7 @@ section {
   text-transform: translateY(180deg);
   font-weight: 500;
 }
-.about-stats .progress-bars .progress-bar .css .progress {
+.about-stats div .progress-bars .css .progress {
   width: 30%;
   height: 1rem;
   background-color: var(--color-grey4);
@@ -278,18 +286,19 @@ section {
   position: relative;
   border: 2px solid black;
 }
-.about-stats .progress-bars .progress-bar .javascript {
+.about-stats div .progress-bars .javascript {
   display: flex;
+  width: 100%;
+  height: 40px;
 }
-.about-stats .progress-bars .progress-bar .javascript .progress-title {
+.about-stats div .progress-bars .javascript .progress-title {
   text-transform: uppercase;
   -ms-writing-mode: tb-rl;
       writing-mode: vertical-rl;
   text-orientation: sideways;
-  text-transform: translateY(180deg);
   font-weight: 500;
 }
-.about-stats .progress-bars .progress-bar .javascript .progress {
+.about-stats div .progress-bars .javascript .progress {
   width: 40%;
   height: 1rem;
   background-color: var(--color-grey4);
@@ -298,16 +307,16 @@ section {
   position: relative;
   border: 2px solid black;
 }
-.about-stats .progress-bars .progress-con {
+.about-stats div .progress-con {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   border: 2px solid red;
 }
-.about-stats .progress-bars .progress-con .progress-text {
+.about-stats div .progress-con .progress-text {
   color: var(--color-grey2);
 }
-.about-stats .progress-bars .progress-con .progress {
+.about-stats div .progress-con .progress {
   width: calc(100% - 1rem);
   height: 0.45rem;
   background-color: var(--color-grey4);
@@ -315,67 +324,51 @@ section {
   margin-bottom: 1rem;
   position: relative;
 }
-.about-stats .progress-bars .progress-con .progress span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: var(--color-secondary);
-  transition: all 0.4s ease-in-out;
-  width: 60%;
-}
-.about-stats .progress-bars .progress-con .progress .html {
-  width: 90%;
-}
-.about-stats .progress-bars .progress-con .progress .css {
-  width: 70%;
-}
-.about-stats .progress-bars .progress-con .progress .js {
-  width: 60%;
-}
-.about-stats .progress-bars .progress-con .progress .react {
-  width: 70%;
-}
-
-.skills {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 600px;
-  margin-top: 2rem;
-}
-.skills .skillsToday {
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
-}
-.skills .skillsToday .skillsTitle {
-  grid-row: 1;
-}
-.skills .skillsToday .skillsContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.skills .skillsToday .skillsContainer div {
+.about-stats .skills {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 60px;
-  height: 60px;
 }
-.skills .skillsToday .skillsContainer div input {
-  border: 2px solid red;
-  width: 100%;
-  height: 100%;
+.about-stats .skills .skillsToday {
+  display: grid;
+  grid-template-columns: 1fr;
 }
-
-.chartContainer {
+.about-stats .skills .skillsToday .skillsTitle {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.chartContainer div {
+.about-stats .skills .skillsToday .skillsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+.about-stats .skills .skillsToday .skillsContainer div {
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50%;
+  flex-direction: column;
+  width: 60px;
+  height: 60px;
+}
+.about-stats .skills .skillsToday .skillsContainer div div {
+  padding: 0.2rem;
+}
+.about-stats .skills .skillsToday .skillsContainer div div input {
+  border: 2px solid red;
+  width: 100%;
+  height: 100%;
+}
+.about-stats .chartContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-stats .chartContainer div {
   width: 300px;
   height: 300px;
 }
@@ -1098,11 +1091,6 @@ a {
   .header-content .right-header {
     grid-row: initial;
     justify-content: center;
-  }
-  .main-title h2 .bg-text {
-    top: 80%;
-    left: 70%;
-    font-size: 4.3rem;
   }
   .controlls {
     right: 1%;

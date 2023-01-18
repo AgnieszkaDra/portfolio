@@ -115,6 +115,7 @@ toogleSwitch.addEventListener('change', switchTheme)
 
 const ctxToday = document.getElementById('myChartToday');
 const HTML = document.querySelector('.HTMLData')
+
 function getVal() {
     
     const val = document.querySelector('.HTMLData').value;
