@@ -113,10 +113,37 @@ toogleSwitch.addEventListener('change', switchTheme)
     toogleIcon.style.display='block'
  }
 
-const ctxYesterday = document.getElementById('myChartYesterday');
- const ctxToday = document.getElementById('myChartToday');
- const ctxTomorrow = document.getElementById('myChartTomorrow');
+const ctxToday = document.getElementById('myChartToday');
+const HTML = document.querySelector('.HTMLData')
+function getVal() {
+    
+    const val = document.querySelector('.HTMLData').value;
+    
+    
+  }
+
  
+
+function updateChart(){
+    const HTMLData = document.querySelector('.HTMLData')
+    const HTMLDataValue = HTMLData.value
+    console.log(HTMLDataValue)
+
+async function fetchData(){
+    const HTMLData = document.querySelector('.HTMLData')
+    const response = await fetch(HTMLData)
+
+
+    const datapoints = await response 
+    console.log(datapoints)
+}
+}
+updateChart()
+
+
+ 
+ 
+
 
 const dataYesterday = {
     labels: [
@@ -128,7 +155,7 @@ const dataYesterday = {
    
     datasets: [{
       label: 'My Skills',
-      data: [60, 10, 10, 40],
+      data: [getVal(), 10, 10, 40],
       backgroundColor: [
         'rgb(255, 99, 132)',
         'rgb(54, 162, 235)',
@@ -140,6 +167,19 @@ const dataYesterday = {
     textposition: "outside",
   };
 
+
+           
+                const HTMLDataNumber = function(){
+  const HTMLData = document.querySelector('.HTMLData')
+  console.log(HTMLData)
+  HTMLData.addEventListener('blur',function(e){
+    const HTMLDataNumber = Number(e.target.value);
+  
+    return HTMLDataNumber
+  })
+                }
+                HTMLDataNumber()
+
   const dataToday = {
     labels: [
       'HTML',
@@ -149,77 +189,48 @@ const dataYesterday = {
     ],
     datasets: [{
       label: 'My Skills',
-      data: [60, 10, 10, 40],
+      data: [80, 10, 10, 40],
+      
       backgroundColor: [
         'rgb(255, 99, 132)',
         'rgb(54, 162, 235)',
         'rgb(255, 205, 86)',
         'rgb(456,19,456'
       ],
-      hoverOffset: 9
+     //borderColor: Utils.CHART_COLORS.red,
+      //backgroundColor: Utils.transparentize(Utils.CHART_COLORS.red, 0.5),
+     
     }]
   };
-
+  
   
   console.dir(dataToday.datasets[0].data[0])
   Chart.register(ChartDataLabels);
   const datapoint = ['HTML','CSS','JavaScript','React',]
-  const dataTomorrow = {
-    labels: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'React',
-    ],
-       plugins: [ChartDataLabels],
-    
- 
-    datasets: [{
-      label: 'My Skills',
-      data: [60, 10, 10, 40],
-      backgroundColor: [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)',
-        'rgb(456,19,456'
-      ],
-      hoverOffset: 4,
-      pieceLabel: {
-        // mode 'label', 'value' or 'percentage', default is 'percentage'
-        //mode: (!mode) ? 'value' : mode,
-    
-        // precision for percentage, default is 0
-        precision: 0,
-    
-        // font size, default is defaultFontSize
-        fontSize: 18,
-    
-        // font color, default is '#fff'
-        fontColor: '#fff',
-    
-        // font style, default is defaultFontStyle
-        fontStyle: 'bold',
-    
-        // font family, default is defaultFontFamily
-        fontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif"
-    }
-    }]
-  
-    }
 
-    console.log(dataTomorrow)
   
-  const chart = new Chart(ctxYesterday, {
+  const chart = new Chart(ctxToday,{
     type: 'pie',
-    data: dataYesterday,
+    data: dataToday,
+   
     options: {
        
         plugins: {
           tooltip: {
-            enabled: false,
+            enabled: false, 
           },
+            legend: {
+            position: 'bottom',
+            align: 'start',
+            onHover: false,
+            onLeave: false,
+        },
+    
+    
+        
+          
           datalabels: {
-            formatter: function(value, context) {
+            formatter: function(value, context, HTMLDataNumber) {
                 console.log(context)
                 console.log(context.chart.data.datasets[0].data)
                 console.log(context.chart.data.labels[context.dataIndex])
@@ -228,19 +239,31 @@ const dataYesterday = {
                 function totalSum(total, datapoint){
                     return total + datapoint
                 }
-                const datapoints = context.chart.data.datasets[0].data
-                const datapointsArray = Object.entries(datapoints)
+
+                //       const HTMLData = document.querySelector('.HTMLData').value;
+                // console.log(typeof val)
+                // const HTMLDataNumber = Number(HTMLData)
+                  const datapoints1 = context.chart.data.datasets[0].data[0]
+                  const datapoints2 = context.chart.data.datasets[0].data[1]
+                // const datapoints = context.chart.data.datasets[0].data
+                const datapoints = [datapoints1,datapoints2]
+           
+          
+                   //chart.update()
+               
                
                 
                 const totalvalue = datapoints.reduce(totalSum,0)
                 const percentageValue = (value/totalvalue *100).toFixed(1)
                 
                 return ` ${percentageValue}%`
+                
               }
           },
+        },
 
          
-        },
+        
        
         events: ['mousemove', 'mouseout', 'click', 'touchstart', 'touchmove'],
          'onClick' : function (evt, item) {
@@ -260,44 +283,29 @@ const dataYesterday = {
              customCanvasBackgroundColor = 'lightGreen',
               text = 'ala'
               
-          alert('Click Two Times')
-            
-        
+          
         },
-        
+       
 
-        
- },
-//  plugins:[ {
-//             tooltip: {
-//               // Tooltip will only receive click events
-//               events: ['click']
-//             },
-//             beforeEvent(chart, args, pluginOptions) {
-//                 const event = args.event;
-//                 if (event.type === 'click') {
-//                     console.log(args)
-//                     console.log(args.event.chart.data.datasets[0].backgroundColor)
-                 
-//                 }
-//               }
-//         },
-//     ]
+    }, 
+   
+ }
+
+
+  )
+ const val = document.querySelector('.HTMLData').value;
+ console.log(typeof val)
+ const valNumber = Number(val)
+    //context.chart.data.datasets[0].data[0] = valNumber
+    chart.update()
+  console.dir(chart)
+//const HTMLDataValue = chart.dataToday.datasets[0].data[0]
+
+function getVal(){
     
- });
-
-
-  new Chart(ctxToday, {
-    type: 'pie',
-    data: dataToday
-    
-  });
-
-  new Chart(ctxTomorrow, {
-    type: 'pie',
-    data: dataTomorrow
-    
-  });
-
-
+                      const HTMLData = document.querySelector('.HTMLData').value;
+           
+                const HTMLDataNumber = Number(HTMLData)
+                return HTMLDataNumber
+}
   

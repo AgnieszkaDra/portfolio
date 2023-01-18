@@ -92,32 +92,73 @@
                 <h4 class="stat-title">My Skills</h4>
                 <div class="progress-bars">
                     <div class="progress-bar">
-                        <p class="progress-title">html5</p>
-                        <div class="progress-con">
-                            <p class="prog text">90%... still learning</p>
+                        
+                            <div class="html">
+                               <div class="progress"></div> 
+                                <div class="progress-title">html5</div>
+                            </div>
+                            <div class="css">
+                                <div class="progress"></div> 
+                                 <div class="progress-title">CSS</div>
+                             </div>
+                             <div class="javascript">
+                                <div class="progress"></div> 
+                                 <div class="progress-title">JavaScript</div>
+                             </div>
+
+                            <!-- <div class="progress-title">css</div>
+                            <div class="progress-title">JavaScript</div> -->
+                        
+
+                        <!-- <div class="progress-con">
+                            <p class="progress-text">90%... still learning</p>
+
                             <div class="progress">
-                                <span class="html"></span>
+                                <span class="css"></span>
+                            </div>
+                            <div class="progress">
+                                <span class="javaScript"></span>
+                            </div> -->
+                        
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="skillsToday">
+                        <div class="skillsTitle">How do you feel Yesterday?</div>
+                        <div class="skillsContainer">
+                            <div> HTML<input type="text" onblur="getVal()" class="HTMLData"></div>
+
+                            <div class="CSSData">
+                                CSS
+                                <input type="text">
+                            </div>
+                            <div class="JavaScriptData">
+                                Java Script
+                                <input type="text">
+                            </div>
+                            <div class="ReactData">
+                                React
+                                <input type="text">
                             </div>
                         </div>
                     </div>
+
+
+
                 </div>
-                    <div class="chartContainer">
-                        <div>
-                            <canvas id="myChartYesterday"></canvas>
-                        </div>
-                        <div>
-                            <canvas id="myChartToday"></canvas>
-                        </div>
-                        <div>
-                            <canvas id="myChartTomorrow"></canvas>
-                        </div>
+                <div class="chartContainer">
+                    <div> Yesterday
+                        <canvas id="myChartToday"></canvas>
                     </div>
 
-                   
-                    
-                    
-                    
-                
+
+                </div>
+
+
+
+
+
+
             </div>
             <h4 class="stat-title">My timeline</h4>
             <div class="timeline">
@@ -409,7 +450,7 @@
         <i class="fas fa-adjust"></i>
     </div> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
     <script src="app.js"></script>
 
 </body>
