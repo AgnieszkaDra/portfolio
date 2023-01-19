@@ -487,17 +487,7 @@ justify-content: flex-start;
                         height: 100%;
                          @include flex();
                        
-                        input {
-                           // grid-row: 2;
-                            border: 2px solid red;
-                            width: 50px;
-                            height: 50px;
-                            @include flex();
-
-
-
-
-                        }
+                      
                      }  
                       
                     }
