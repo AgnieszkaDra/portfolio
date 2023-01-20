@@ -4,7 +4,11 @@ $transition-main: all .4s ease-in-out;
     display: flex;
     justify-content: center;
     align-items: center;
-};
+}
+
+$margin: 1rem;
+
+;
 
 $box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 $br-sm-2: 14px;
@@ -99,6 +103,7 @@ section {
         position: relative;
         width: 100%;
         height: 100%;
+
         .h-shape {
             transition: $transition-main;
             width: 65%;
@@ -243,103 +248,86 @@ section {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    border: 2px solid red;
+    margin: 1rem;
 
-    div {
+    .about-stats-con {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 4rem;
-
+        grid-template-rows: repeat(3, 100px);
+        //width: calc(100%-$margin);
+        //margin: 1rem;
         .progress-bars {
-            display: flex;
-            justify-content: flex-start;
-            flex-direction: column;
+            //display: flex;
+            //justify-content: flex-start;
+            //flex-direction: column;
+            width: calc(4rem + 1vh);
+            margin: 1rem;
 
-            div {
+            .progress-title {
+                text-transform: uppercase;
+                writing-mode: vertical-rl;
+                text-orientation: sideways;
+                text-transform: translateY(180deg);
+                //font-weight: 500;
+            }
+
+            .progress {
+
+                height: 1rem;
+                background-color: var(--color-grey4);
+
                 margin-bottom: 1rem;
+                position: relative;
+                border: 2px solid black;
             }
 
-            .html {
+            .progress.html {
+                display: flex;
+                width: 40%;
+                height: 10px;
+            }
+
+            .progress.css {
+                display: flex;
+                width: 80%;
+                height: 10px;
+            }
+
+
+            .progress.javascript {
                 display: flex;
                 width: 100%;
-                height: 40px;
-
-                .progress-title {
-                    text-transform: uppercase;
-                    writing-mode: vertical-rl;
-                    text-orientation: sideways;
-                    text-transform: translateY(180deg);
-                    font-weight: 500;
-                }
-
-                .progress {
-                    width: 10%;
-                    height: 1rem;
-                    background-color: var(--color-grey4);
-                    margin-left: 1rem;
-                    margin-bottom: 1rem;
-                    position: relative;
-                    border: 2px solid black;
-
-
-
-                }
-
-
+                height: 10px;
             }
 
-            .css {
-                display: flex;
-                width: 100%;
-                height: 40px;
-
-                .progress-title {
-                    text-transform: uppercase;
-                    writing-mode: vertical-rl;
-                    text-orientation: sideways;
-                    text-transform: translateY(180deg);
-                    font-weight: 500;
-                }
-
-                .progress {
-                    width: 30%;
-                    height: 1rem;
-                    background-color: var(--color-grey4);
-                    margin-left: 1rem;
-                    margin-bottom: 1rem;
-                    position: relative;
-                    border: 2px solid black;
-
-
-
-                }
-
-
-            }
-
-            .javascript {
-                display: flex;
-                width: 100%;
-                height: 40px;
-
-                .progress-title {
-                    text-transform: uppercase;
-                    writing-mode: vertical-rl;
-                    text-orientation: sideways;
-
-                    font-weight: 500;
-                }
-
-                .progress {
-                    width: 40%;
-                    height: 1rem;
-                    background-color: var(--color-grey4);
-                    margin-left: 1rem;
-                    margin-bottom: 1rem;
-                    position: relative;
-                    border: 2px solid black;
-                }
-            }
         }
+
+
+
+
+
+
+
+
+        // .progress-bars {
+
+
+        // div {
+        //     margin-bottom: 1rem;
+        // }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         .progress-con {
             display: flex;
@@ -361,61 +349,8 @@ section {
             }
         }
     }
-
-//     .skills {
-//         @include flex();
-//         flex-direction: column;
-//         .skillsToday {
-//             display: grid;
-//             grid-template-rows: repeat(2, 1fr);
-//             margin-bottom: 1rem;
-
-//             .skillsTitle {
-//                 display: flex;
-//                 justify-content: center;
-//                 align-items: flex-start;
-//                 grid-row: 1;
-//             }
-
-//             .skillsContainer {
-//                 grid-row: 2;
-//                 display: grid;
-//                 grid-template-columns: repeat(4, 1fr);
-//                 @include flex();
-
-//                 .data {
-//                     padding: 0.2rem;
-//                     display: grid;
-//                     grid-template-columns: 100px;
-//                     height: 100px;
-//                     grid-gap: 0;
-//                     flex-direction: column;
-
-//                     .name {
-//                         @include flex();
-//                         padding: 0.2rem;
-//                         width: 100%;
-//                         height: 100%;
-//                     }
-
-//                     div {
-//                         background-color: pink;
-//                         width: 100%;
-//                         height: 100%;
-//                         @include flex();
-//                     }
-//                 }
-//             }
-//         }
-//     }
-
-// }
-//  .chartContainer {
-//     @include flex();
-//     width: 300px;
-//     height: 300px;
-// }
 }
+
 .stat-title {
     text-transform: uppercase;
     font-size: calc(2rem + 1vh);
@@ -496,7 +431,7 @@ section {
     text-align: center;
 }
 
-.portfolio h2{
+.portfolio h2 {
     text-align: center;
     font-size: calc(1rem + 1vh);
 }
@@ -511,19 +446,20 @@ section {
         position: relative;
         background-color: white;
 
-        div{
-          display: grid;
-          grid-template-columns: repeat(2,1fr);
+        div {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
             img {
-           
-            @include flex();
-           
-            object-fit:contain;
-            border-radius: 15px;
-        }
+
+                @include flex();
+
+                object-fit: contain;
+                border-radius: 15px;
+            }
         }
 
-        
+
 
         .hover-items {
             width: 100%;
