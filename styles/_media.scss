@@ -21,27 +21,31 @@ $transition-main: all .4s ease-in-out;
         grid-template-columns: 1fr;
         //margin-right: calc(2rem + 2vh);
         //min-height: 100vh;
-    
+
 
         .right-header {
             grid-row: 1;
             margin: 0 auto;
             padding-right: 0;
+
             .name {
-                font-size: calc(0.7rem + 1vh) ;
+                font-size: calc(0.7rem + 1vh);
             }
-            h2{
+
+            h2 {
                 font-size: calc(0.5rem + 1vh);
                 text-align: start;
             }
-            p{
+
+            p {
                 font-size: calc(0.4rem + 1vh);
             }
-           
+
         }
 
         .left-header {
             padding-right: 0;
+
             .h-shape {
                 display: none;
             }
@@ -86,27 +90,52 @@ $transition-main: all .4s ease-in-out;
                 justify-content: center;
                 align-self: center;
             }
+        }
+    }
 
-            .about-stats {
-                .progress-bars {
-                    display: grid;
-                    grid-template-columns: 1fr;
-                }
-            }
+    .about-stats {
 
-            .timeline {
+        div {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 4rem;
+
+            .progress-bars {
                 display: grid;
                 grid-template-columns: 1fr;
-                padding-bottom: 6rem;
-                margin-left: 1rem;
+                margin-bottom: 2rem;
             }
 
-            .timeline .timeline-item .tl-icon {
-                position: absolute;
-                left: -20px;
+            .skills {
+                .skillsToday {
+                    .skillsTitle {
+                        align-items: center;
+                    }
+
+                    .skillsContainer {
+
+                        border: 2px solid red;
+                    }
+                }
             }
         }
     }
+
+
+
+    .timeline {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding-bottom: 6rem;
+        margin-left: 1rem;
+    }
+
+    .timeline .timeline-item .tl-icon {
+        position: absolute;
+        left: -20px;
+    }
+
+
 
     .portfolios {
         display: grid;
@@ -163,7 +192,9 @@ $transition-main: all .4s ease-in-out;
 
     .main-title {
         padding-top: 4rem;
+
         h2 {
+
             //font-size: 2rem;
             span {
                 font-size: 2.5rem;
@@ -215,20 +246,22 @@ $transition-main: all .4s ease-in-out;
         grid-template-columns: 1fr;
         //margin-right: calc(2rem + 2vh);
         padding: 2rem;
+
         //min-height: 100vh;
         .right-header {
-           padding: 1rem 1rem 5rem 0;
+            padding: 1rem 1rem 5rem 0;
             grid-row: 1;
             justify-content: space-between;
-           .btn-con{
-            @include flex();
-            align-self: center;
-           }
+
+            .btn-con {
+                @include flex();
+                align-self: center;
+            }
         }
 
         .left-header {
             padding-right: 5rem;
-           
+
             .h-shape {
                 display: none;
             }
@@ -240,49 +273,52 @@ $transition-main: all .4s ease-in-out;
         }
     }
 
-    
+
+}
+
+
+.about-container {
+    margin: 1rem;
+
+
+    .left-about {
+        padding: 0;
     }
 
+    .right-about {
+        align-self: flex-start;
 
-    .about-container {
-        margin: 1rem;
-      
-
-        .left-about {
-            padding: 0;
-        }
-
-        .right-about {
-            align-self: flex-start;
-
-            .about-item {
-                @include flex();
-            }
+        .about-item {
+            @include flex();
         }
     }
+}
 
 
 
-@media(min-width: 1000px){
-    .sec1{
+@media(min-width: 1000px) {
+    .sec1 {
         padding: 0;
     }
 
     .header-content {
         padding: 0;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
+
         //min-height: 100vh;
         .left-header {
             .h-shape {
                 display: block;
             }
+
             .image {
                 height: 100%;
                 width: 100%;
             }
         }
-        .right-header{
+
+        .right-header {
             grid-row: initial;
             justify-content: center;
         }
@@ -292,15 +328,13 @@ $transition-main: all .4s ease-in-out;
     //     //font-size: 6rem;
     // }
     // .main-title h2 .bg-text {
-        
+
     //     top: 80%;
     //     left: 70%;
     //     font-size: 4.3rem;
     // }
 
-    .controlls{
+    .controlls {
         right: 1%;
     }
 }
-
-
