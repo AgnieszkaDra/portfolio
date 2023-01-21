@@ -68,7 +68,19 @@ $margin-right: calc(2rem + 3vh);
         .right-about {
             grid-template-columns: 1fr;
             padding-top: 2.5rem;
-           width: 100%;
+            width: 100%;
+            align-self: flex-start;
+            margin-right: $margin-right;
+
+            .about-item {
+               margin-right: $margin-right;
+                align-self: flex-start;
+                width: 70%;
+                    .abt-text{
+                        .small-text{
+                            font-size: calc(0.4rem + 1vh);
+                        }
+                    }
         }
 
         .left-about {
@@ -87,6 +99,7 @@ $margin-right: calc(2rem + 3vh);
 
             .about-item {
                 width: 90%;
+                align-self: flex-start;
             }
 
             .btn-con {
@@ -100,7 +113,7 @@ $margin-right: calc(2rem + 3vh);
     .about-stats {
 
         .stat-title{
-            font-size: calc(1.5rem + 1vh);
+            font-size: calc(1rem + 1vh);
         }
         // div {
         //     display: grid;
@@ -229,6 +242,16 @@ $margin-right: calc(2rem + 3vh);
     }
 }
 
+.about-stats{
+    .stat-title{
+        font-size: calc(1rem + 1vh);
+    }
+}
+
+.stat-title{
+    font-size: calc(1rem + 1vh);
+}
+
 @media(min-width: 768px) {
     .sec1 {
         padding: 0.5rem;
@@ -354,4 +377,5 @@ $margin-right: calc(2rem + 3vh);
     .controlls {
         right: 1%;
     }
+}
 }
