@@ -1006,22 +1006,22 @@ a {
     height: 70%;
     width: 70%;
   }
-  .about-container {
+  .sec2 .about-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     margin: 1rem;
   }
-  .about-container .left-about {
+  .sec2 .about-container .left-about {
     padding: 0;
     align-self: flex-start;
   }
-  .about-container .right-about {
+  .sec2 .about-container .right-about {
     align-self: flex-start;
     margin-right: calc(2rem + 3vh);
   }
-  .about-container .right-about .about-item {
+  .sec2 .about-container .right-about .about-item {
     display: flex;
     justify-content: center;
     align-items: center;

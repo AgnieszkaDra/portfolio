@@ -303,8 +303,10 @@ $margin-right: calc(2rem + 3vh);
         }
     }
 
+    .sec2{
     .about-container {
     //margin-right: calc(2rem + 3vh);
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -327,6 +329,8 @@ $margin-right: calc(2rem + 3vh);
         }
     }
 }
+    }
+
 
 
 }
