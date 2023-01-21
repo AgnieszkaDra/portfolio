@@ -1,5 +1,5 @@
 header {
-  color: violet;
+  color: var(--color-white);
   overflow: hidden;
 }
 
