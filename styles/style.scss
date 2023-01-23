@@ -22,8 +22,43 @@ section {
     width: calc(100% - $margin-right);
     position: absolute;
     left: 0;
-    top: 0;
 }
+    
+// .main-title{
+//          top: 0;
+//         text-align: center;
+//         position: relative;
+//         margin-right: calc(2rem + 3vh);
+//          .main-title h2 {
+//         position: relative;
+//         text-transform: uppercase;
+//         font-size: calc(2rem + 1vh);
+//         font-size: 700;
+//         z-index: 2;
+//         span{
+//             color: var(--color-secondary);
+//             z-index: 2;
+//             font-size: calc(2rem + 1vh);
+//             position: relative;
+//             .bg-text{
+//                 position: absolute;
+//                 top: 50%;
+//                 left: 50%;
+//                 color: var(--color-grey5);
+//                 transition: all 0.4s ease-in-out;
+//                 z-index: 1;
+//                 font-weight: 800;
+//                 font-size: calc(1rem + 1vh);
+//                 text-transform: uppercase;
+//                 text-shadow: var(--color-secondary) 1px 0 10px;
+//             }
+//         }
+//     }
+//     }
+
+   
+   
+
 
 .section {
     background-color: var(--color-primary);
@@ -232,7 +267,7 @@ header{
 
     .left-about {
         margin-left: 1rem;
-       margin-bottom: 2rem;
+        margin-bottom: 2rem;
 
         p {
             line-height: 2rem;
@@ -243,7 +278,6 @@ header{
         h4 {
             font-size: calc(1.5rem + 1vh);
             text-transform: uppercase;
-            margin-left: 1rem;
         }
 
         .btn-con{
@@ -547,6 +581,7 @@ header{
     padding-top: 3.5rem;
 
     .left-contact {
+       
         flex: 2;
 
         h4 {
@@ -561,6 +596,8 @@ header{
         }
 
         .contact-info {
+            padding: 2rem;
+           
             .contact-item {
                 display: flex;
                 align-items: center;
@@ -619,8 +656,7 @@ header{
 
     .right-contact {
         flex: 3;
-        margin-left: 3rem;
-
+        
         .input-control {
             margin: 1.5rem 0;
 
@@ -717,6 +753,43 @@ header{
     }
 }
 
+.portfolio {
+    text-align: center;
+    position: relative;
+    
+    h2 {
+        position: relative;
+        text-transform: uppercase;
+        font-size: calc(2rem + 1vh);
+        font-size: 700;
+        z-index: 2;
+        margin-top: 1rem;
+
+        span {
+            color: var(--color-secondary);
+            z-index: 2;
+            font-size: calc(2rem + 1vh);
+            position: relative;
+        }
+
+    }
+
+    .bg-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        color: var(--color-grey5);
+        transition: $transition-main;
+        z-index: 1;
+        //transform: translate(-30%, -5%);
+        font-weight: 800;
+        font-size: calc(1rem + 1vh);
+        text-transform: uppercase;
+        text-shadow: var(--color-secondary) 1px 0 10px;
+    }
+}
+
 .main-title {
     text-align: center;
     position: relative;
@@ -753,6 +826,7 @@ header{
         text-shadow: var(--color-secondary) 1px 0 10px;
     }
 }
+
 
 
 /* Dark Mode Toggle */
