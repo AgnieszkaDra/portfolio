@@ -522,11 +522,11 @@ header {
 .contact-content-con .right-contact {
   flex: 3;
 }
-.contact-content-con .right-contact .input-control {
+.contact-content-con .right-contact form .input-control {
   margin: 1.5rem 0;
 }
-.contact-content-con .right-contact .input-control input,
-.contact-content-con .right-contact .input-control textarea {
+.contact-content-con .right-contact form .input-control input,
+.contact-content-con .right-contact form .input-control textarea {
   border-radius: 30px;
   font-weight: inherit;
   font-size: inherit;
@@ -536,26 +536,29 @@ header {
   border: none;
   background-color: var(--color-grey5);
   width: 100%;
-  color: var(--color-white);
   resize: none;
 }
-.contact-content-con .right-contact .i-c-2 {
+.contact-content-con .right-contact form .input-control ::-moz-placeholder {
+  color: var(--color-grey4);
+}
+.contact-content-con .right-contact form .input-control :-ms-input-placeholder {
+  color: var(--color-grey4);
+}
+.contact-content-con .right-contact form .input-control ::placeholder {
+  color: var(--color-grey4);
+}
+.contact-content-con .right-contact form .i-c-2 {
   display: flex;
 }
-.contact-content-con .right-contact .i-c-2 :last-child {
+.contact-content-con .right-contact form .i-c-2 :last-child {
   margin-left: 1.5rem;
 }
-.contact-content-con .right-contact .submit-btn {
+.contact-content-con .right-contact form .submit-btn {
   display: flex;
   justify-content: flex-start;
 }
 
 /*Indenpended components*/
-.btn-con {
-  display: flex;
-  align-self: flex-start;
-}
-
 .main-btn {
   border-radius: 30px;
   color: inherit;
@@ -587,7 +590,18 @@ header {
 }
 
 .main-btn.send {
-  background-color: black;
+  background-color: var(--color-grey5);
+  margin-left: 45%;
+  color: var(--color-grey4);
+  padding: 1.5rem;
+  width: 10%;
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-btn.send:hover {
+  transform: scale(110%);
 }
 
 .portfolio {

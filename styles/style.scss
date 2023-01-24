@@ -656,13 +656,16 @@ header{
 
     .right-contact {
         flex: 3;
-        
-        .input-control {
+        form{
+          
+           .input-control {
             margin: 1.5rem 0;
+            
 
             input,
             textarea {
                 border-radius: 30px;
+             
                 font-weight: inherit;
                 font-size: inherit;
                 font-family: inherit;
@@ -671,9 +674,14 @@ header{
                 border: none;
                 background-color: var(--color-grey5);
                 width: 100%;
-                color: var(--color-white);
+                
                 resize: none;
-            }
+                  
+            } 
+             ::placeholder{
+                        color: var(--color-grey4)
+                    }
+            
         }
 
         .i-c-2 {
@@ -688,15 +696,14 @@ header{
             display: flex;
             justify-content: flex-start;
         }
-
+  
+        }
+       
     }
 }
 
 /*Indenpended components*/
-.btn-con {
-    display: flex;
-    align-self: flex-start;
-}
+
 
 .main-btn {
     border-radius: 30px;
@@ -704,7 +711,7 @@ header{
     font-weight: 600;
     position: relative;
     border: 1px solid var(--color-secondary);
-    
+   
      display: flex;
     align-items: center;
     overflow: hidden;
@@ -730,7 +737,17 @@ header{
 
 }
 .main-btn.send{
-    background-color: black;
+    background-color: var(--color-grey5);
+    margin-left: 45%;
+    color: var(--color-grey4);
+    padding: 1.5rem;
+    width: 10%;
+    font-size: larger;
+    @include flex();
+        &:hover{
+           transform: scale(110%);
+        }
+
  }
 
     
