@@ -157,6 +157,11 @@ header {
 .header-content .right-header h2 {
   text-align: center;
 }
+.header-content .right-header div:last-child {
+  color: red;
+  justify-self: flex-start;
+  margin-top: 30vh;
+}
 
 /*About*/
 .about-container {
