@@ -366,15 +366,36 @@ header {
   background-color: white;
   border-radius: 15px;
 }
-.portfolios .portfolio-item div {
-  display: flex;
+.portfolios .portfolio-item h1 {
+  color: var(--color-black);
 }
-.portfolios .portfolio-item div img {
+.portfolios .portfolio-item .imagecon.one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 1fr;
+  height: 400px;
+}
+.portfolios .portfolio-item .imagecon.one .img {
   border-radius: 15px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
-  height: 100%;
+  height: 90%;
+}
+.portfolios .portfolio-item .imagecon.two {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 1fr;
+  height: 400px;
+}
+.portfolios .portfolio-item .imagecon.two .twoimages {
+  flex-direction: column;
+  width: 80%;
+  height: 50%;
 }
 .portfolios .portfolio-item .hover-items {
   width: 100%;
@@ -391,6 +412,29 @@ header {
   opacity: 0;
   transform: scale(0);
   transition: all 0.4s ease-in-out;
+}
+.portfolios .portfolio-item .hover-items .technologies-con {
+  margin-bottom: 2rem;
+  font-weight: 200;
+}
+.portfolios .portfolio-item .hover-items .technologies-con .technologies-list.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.portfolios .portfolio-item .hover-items .technologies-con .technologies-list.two-col li {
+  margin: 0.5rem;
+}
+.portfolios .portfolio-item .hover-items .technologies-con .technologies-list.three-col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.portfolios .portfolio-item .hover-items .technologies-con .technologies-list.four-col {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+}
+.portfolios .portfolio-item .hover-items .technologies-con .technologies-list.five-col {
+  display: grid;
+  grid-template-columns: repeat(5, 100px);
 }
 .portfolios .portfolio-item .hover-items h3 {
   font-size: 1.5rem;
@@ -759,7 +803,7 @@ input:checked + .slider::before {
   --color-primary: hsl(204, 70%, 54%) ;
   --color-secondary: #223c83;
   --color-white: #FFFFFF;
-  ---color-black: #000;
+  --color-black: #000;
   --color-grey0: #f8f8f8;
   --color-grey1: #dbe1e8;
   --color-grey2: #b2becd;

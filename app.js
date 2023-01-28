@@ -7,7 +7,9 @@ const portfolioLink = document.querySelector('.portfolio-link')
 const bgText = document.querySelector('.bg-text')
 const mql = window.matchMedia("(max-width: 768px)")
 const mqltablet = window.matchMedia("(min-width:768px)")
-const toogleIcon = this.document.querySelector('#toggle-icon')
+const toogleIcon = document.querySelector('#toggle-icon')
+const portfolioItems = document.querySelectorAll('.portfolio-item')
+const projectsAmount = document.querySelector('.projectsAmount')
 
 function PageTransitions() {
     for (let i = 0; i < sectBtn.length; i++) {
@@ -96,4 +98,12 @@ if (mql.matches) {
 } else if (mqltablet.matches) {
     toogleIcon.style.display = 'block'
 }
+
+
+const portfolioItemsNumber = portfolioItems.length
+projectsAmount.innerHTML = portfolioItemsNumber + '+'
+
+
+
+
 

@@ -440,18 +440,41 @@ header{
         //     display: grid;
         //     grid-template-columns: repeat(2, 1fr);
         // }
+        h1{
+            color: var(--color-black);
+           
+        }
        
-          div{
-            display: flex;
+        .imagecon.one{
+        @include flex();
+        flex-direction: row;
+            //flex-direction: column;
         //     display: grid;
         // grid-template-columns: repeat(2, 1fr);
-            img{
+        width: 1fr;
+        height: 400px;
+            .img {
+               
                border-radius: 15px;  
-              object-fit: cover;
+              object-fit: contain;
               width: 100%;
-              height: 100%;
+              height: 90%;
             }
+           
           }  
+          .imagecon.two{
+            @include flex();
+            flex-direction: column;
+            
+           width: 1fr;
+           height: 400px;
+             .twoimages{
+               flex-direction: column;
+                width: 80%;
+                height: 50%;
+            }
+          }
+
             .hover-items {
         
             width: 100%;
@@ -466,6 +489,34 @@ header{
             opacity: 0;
             transform: scale(0);
             transition: $transition-main;
+
+            .technologies-con {
+                margin-bottom: 2rem;
+                font-weight: 200;
+                //margin-bottom: auto;
+                .technologies-list.two-col{
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    li{
+                        margin: 0.5rem;
+                    }
+                } 
+                .technologies-list.three-col{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                }
+                .technologies-list.four-col{
+                    display: grid;
+                    grid-template-columns: repeat(4, 100px);
+                }
+                .technologies-list.five-col{
+                    display: grid;
+                    grid-template-columns: repeat(5, 100px);
+                }
+
+            }
+
+            
 
             h3 {
                 font-size: 1.5rem;
