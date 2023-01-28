@@ -187,7 +187,7 @@ header{
             }
         }
 
-        .portfolio-link {
+        .link {
             text-decoration: underline;
         }
 
@@ -202,7 +202,7 @@ header{
         }
 
         div:last-child{
-            color: red;
+            color: var(--color-secondary);
             justify-self: flex-start;
             margin-top: 30vh;
         }
@@ -273,7 +273,7 @@ header{
 
     .left-about {
         margin-left: 1rem;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
 
         p {
             line-height: 2rem;
@@ -285,10 +285,10 @@ header{
             font-size: calc(1.5rem + 1vh);
             text-transform: uppercase;
         }
-
-        .btn-con{
+    } 
+    .btn-con{
             margin-left: 1rem;
-        }
+            margin-bottom: 2rem;
     }
 }
 
@@ -305,28 +305,16 @@ header{
         grid-template-rows: repeat(5, 60px);
         align-self: flex-start;
         width: 90%;
-        //width: calc(100%-$margin);
-        //margin: 1rem;
         .progress-bars {
-            //display: flex;
-            //justify-content: flex-start;
-            //flex-direction: column;
-           
             margin: 1rem;
 
             .progress-title {
-                // text-transform: uppercase;
-                // writing-mode: vertical-rl;
-                // text-orientation: sideways;
-                // text-transform: translateY(180deg);
-                font-weight: 500;
+               font-weight: 500;
             }
 
             .progress {
-
                 height: 1rem;
                 background-color: var(--color-grey4);
-
                 margin-bottom: 1rem;
                 position: relative;
                 border: 2px solid black;
@@ -359,54 +347,6 @@ header{
                 width: 70%;
                 height: 10px;
             }
-
-        }
-
-
-
-
-
-
-
-
-        // .progress-bars {
-
-
-        // div {
-        //     margin-bottom: 1rem;
-        // }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        .progress-con {
-            display: flex;
-            justify-content: space-between;
-            flex-direction: column;
-            border: 2px solid red;
-
-            .progress-text {
-                color: var(--color-grey2);
-            }
-
-            .progress {
-                width: calc(100% - 1rem);
-                height: .45rem;
-                background-color: var(--color-grey4);
-                margin-left: 1rem;
-                margin-bottom: 1rem;
-                position: relative;
-            }
         }
     }
 }
@@ -416,16 +356,6 @@ header{
     font-size: calc(2rem + 1vh);
     text-align: center;
     padding: 1rem 0;
-
-    &::before {
-        content: '';
-        left: 50%;
-        top: 0;
-        width: 40%;
-        height: 10px;
-        background-color: --color-grey5;
-        transform: translateX((-50%));
-    }
 }
 
 /*Timeline*/
@@ -473,7 +403,7 @@ header{
             font-weight: 600;
 
             span {
-                color: --color-grey2;
+                color: var(--color-grey2);
                 font-weight: 500;
                 font-size: 1.2rem;
             }
@@ -481,7 +411,6 @@ header{
 
         p {
             color: var(--color-grey2);
-
         }
     }
 }
@@ -506,26 +435,28 @@ header{
     .portfolio-item {
         position: relative;
         background-color: white;
-
-        div {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-
-            img {
-
-                @include flex();
-
-                object-fit: contain;
-                border-radius: 15px;
+        border-radius: 15px;
+        // div{
+        //     display: grid;
+        //     grid-template-columns: repeat(2, 1fr);
+        // }
+       
+          div{
+            display: flex;
+        //     display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+            img{
+               border-radius: 15px;  
+              object-fit: cover;
+              width: 100%;
+              height: 100%;
             }
-        }
-
-
-
-        .hover-items {
+          }  
+            .hover-items {
+        
             width: 100%;
             height: 100%;
-            background-color: --color-secondary;
+            background-color: var(--color-secondary);
             position: absolute;
             left: 0;
             top: 0;
@@ -941,7 +872,7 @@ header{
 }
 
 .slider::before {
-    background: #fff;
+    background: var(--color-white);
     bottom: 4px;
     content: "";
     height: 26px;
@@ -952,7 +883,7 @@ header{
 }
 
 input:checked+.slider {
-    background: var(--primary-color);
+    background: var(--color-secondary);
 }
 
 input:checked+.slider::before {

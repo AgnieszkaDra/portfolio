@@ -144,7 +144,7 @@ header {
   display: block;
   margin: 12px;
 }
-.header-content .right-header .portfolio-link {
+.header-content .right-header .link {
   text-decoration: underline;
 }
 .header-content .right-header p {
@@ -158,7 +158,7 @@ header {
   text-align: center;
 }
 .header-content .right-header div:last-child {
-  color: red;
+  color: var(--color-secondary);
   justify-self: flex-start;
   margin-top: 30vh;
 }
@@ -216,7 +216,7 @@ header {
 }
 .about-container .left-about {
   margin-left: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .about-container .left-about p {
   line-height: 2rem;
@@ -227,8 +227,9 @@ header {
   font-size: calc(1.5rem + 1vh);
   text-transform: uppercase;
 }
-.about-container .left-about .btn-con {
+.about-container .btn-con {
   margin-left: 1rem;
+  margin-bottom: 2rem;
 }
 
 .about-stats {
@@ -283,38 +284,12 @@ header {
   width: 70%;
   height: 10px;
 }
-.about-stats .about-stats-con .progress-con {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  border: 2px solid red;
-}
-.about-stats .about-stats-con .progress-con .progress-text {
-  color: var(--color-grey2);
-}
-.about-stats .about-stats-con .progress-con .progress {
-  width: calc(100% - 1rem);
-  height: 0.45rem;
-  background-color: var(--color-grey4);
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-  position: relative;
-}
 
 .stat-title {
   text-transform: uppercase;
   font-size: calc(2rem + 1vh);
   text-align: center;
   padding: 1rem 0;
-}
-.stat-title::before {
-  content: "";
-  left: 50%;
-  top: 0;
-  width: 40%;
-  height: 10px;
-  background-color: --color-grey5;
-  transform: translateX(-50%);
 }
 
 /*Timeline*/
@@ -361,7 +336,7 @@ header {
   font-weight: 600;
 }
 .timeline .timeline-item h5 span {
-  color: --color-grey2;
+  color: var(--color-grey2);
   font-weight: 500;
   font-size: 1.2rem;
 }
@@ -389,23 +364,22 @@ header {
 .portfolios .portfolio-item {
   position: relative;
   background-color: white;
+  border-radius: 15px;
 }
 .portfolios .portfolio-item div {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
 }
 .portfolios .portfolio-item div img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -o-object-fit: contain;
-     object-fit: contain;
   border-radius: 15px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 .portfolios .portfolio-item .hover-items {
   width: 100%;
   height: 100%;
-  background-color: --color-secondary;
+  background-color: var(--color-secondary);
   position: absolute;
   left: 0;
   top: 0;
@@ -750,7 +724,7 @@ header {
 }
 
 .slider::before {
-  background: #fff;
+  background: var(--color-white);
   bottom: 4px;
   content: "";
   height: 26px;
@@ -761,7 +735,7 @@ header {
 }
 
 input:checked + .slider {
-  background: var(--primary-color);
+  background: var(--color-secondary);
 }
 
 input:checked + .slider::before {
@@ -1084,7 +1058,7 @@ a {
     margin-top: 2.5rem;
   }
   .contact-content-con .left-contact {
-    width: 100%;
+    width: 80%;
   }
   .contact-content-con .left-contact h4 {
     font-size: 1.5rem;

@@ -2,29 +2,26 @@ const sections = document.querySelectorAll('.section')
 const sectBtns = document.querySelectorAll('.controlls')
 const sectBtn = document.querySelectorAll('.control')
 const allSections = document.querySelector('.main-content')
-console.dir(allSections)
 const toggleIcon = document.getElementById('toggle-icon')
-console.log(toggleIcon.children)
-const textBox = document.getElementById('text-box')
 const portfolioLink = document.querySelector('.portfolio-link')
 const bgText = document.querySelector('.bg-text')
+const mql = window.matchMedia("(max-width: 768px)")
+const mqltablet = window.matchMedia("(min-width:768px)")
+const toogleIcon = this.document.querySelector('#toggle-icon')
 
 function PageTransitions() {
-    // Button click active class
-    for(let i=0; i < sectBtn.length; i++){
-        sectBtn[i].addEventListener('click', function() {
+    for (let i = 0; i < sectBtn.length; i++) {
+        sectBtn[i].addEventListener('click', function () {
             let currentBtn = document.querySelectorAll('.active-btn')
             currentBtn[0].className = currentBtn[0].className.replace('active-btn', '')
             this.className += ' active-btn'
         })
     }
 
-   allSections.addEventListener('click', (e)=> {
+    allSections.addEventListener('click', (e) => {
         const id = e.target.dataset.id;
-        console.log(id)
-       
-        if(id) {
-           sectBtns.forEach((btn) => {
+        if (id) {
+            sectBtns.forEach((btn) => {
                 btn.classList.remove('active')
             })
             e.target.classList.add('active')
@@ -36,80 +33,67 @@ function PageTransitions() {
             element.classList.add('active')
         }
     })
-
-  
 }
 
 PageTransitions()
 
-function forwardPage(e){
+
+
+function forwardPage(e) {
     const id = e.target;
     const page = document.querySelector('#portfolios')
     const parentPage = page.parentElement
     const controlPage = document.querySelector('[data-id="portfolio"]')
     const controlId = document.querySelector('[data-id="home"]')
-    
-    if(id) {
-        
+
+    if (id) {
         controlId.classList.remove('active-btn')
         controlPage.classList.add('active-btn')
-
         parentPage.classList.add('active')
     }
-      
 }
-
-
 
 portfolioLink.addEventListener('click', forwardPage)
 
 const toogleSwitch = document.querySelector('input[type="checkbox"]')
 
-function darkMode(){
-  
+function darkMode() {
+
     toggleIcon.children[0].textContent = 'Dark Mode'
     toggleIcon.children[1].classList.remove('fa-sun')
     toggleIcon.children[1].classList.add('fa-moon')
 
 }
 
-function lightMode(){
-  
+function lightMode() {
+
     toggleIcon.children[0].textContent = 'Light Mode'
     toggleIcon.children[1].classList.remove('fa-moon')
     toggleIcon.children[1].classList.add('fa-sun')
 
 }
 
-// Switch Theme Dynamically
-function switchTheme(event){
-    //console.log(event.target.checked)
-    if(event.target.checked){
+
+function switchTheme(event) {
+   
+    if (event.target.checked) {
         document.documentElement.setAttribute('data-theme', 'light')
         lightMode()
 
-    }else{
-       document.documentElement.removeAttribute('data-theme', 'light')
-       darkMode()
+    } else {
+        document.documentElement.removeAttribute('data-theme', 'light')
+        darkMode()
     }
 }
 
 //Event Listener
 toogleSwitch.addEventListener('change', switchTheme)
 
-
-    const mql = window.matchMedia("(max-width: 768px)");
-    const mqltablet = window.matchMedia("(min-width:768px)")
-  const toogleIcon = this.document.querySelector('#toggle-icon')
- 
- if(mql.matches){
-  
-  toogleIcon.style.display='none'
+if (mql.matches) {
+    toogleIcon.style.display = 'none'
     bgText.style.display = 'none'
-  
 
-
- } else if(mqltablet.matches){
-    toogleIcon.style.display='block'
- }
+} else if (mqltablet.matches) {
+    toogleIcon.style.display = 'block'
+}
 
