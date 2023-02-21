@@ -120,7 +120,13 @@ projectsAmount.innerHTML = portfolioItemsNumber + '+'
 //     document.getElementById('status').innerHTML = 'OpenCV.js is ready.';
 //   }
 // };
+const cv = document.querySelector('.cv')
+cv.addEventListener('click', function(el){
+    el.download = 'cv.pdf'
+    el.href= './img/cv.pdf'
+    alert('el')
 
+})
 
 const uri = '../img/cv.pdf'
 const name = 'cv.pdf'
