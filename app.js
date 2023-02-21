@@ -104,24 +104,34 @@ const portfolioItemsNumber = portfolioItems.length
 projectsAmount.innerHTML = portfolioItemsNumber + '+'
 
 
-let imgElement = document.getElementById('imageSrc');
-let inputElement = document.getElementById('fileInput');
-inputElement.addEventListener('change', (e) => {
-  imgElement.src = URL.createObjectURL(e.target.files[0]);
-}, false);
-imgElement.onload = function() {
-  let mat = cv.imread(imgElement);
-  cv.imshow('canvasOutput', mat);
-  mat.delete();
-};
-var Module = {
-  // https://emscripten.org/docs/api_reference/module.html#Module.onRuntimeInitialized
-  onRuntimeInitialized() {
-    document.getElementById('status').innerHTML = 'OpenCV.js is ready.';
-  }
-};
+// let imgElement = document.getElementById('imageSrc');
+// let inputElement = document.getElementById('fileInput');
+// inputElement.addEventListener('change', (e) => {
+//   imgElement.src = URL.createObjectURL(e.target.files[0]);
+// }, false);
+// imgElement.onload = function() {
+//   let mat = cv.imread(imgElement);
+//   cv.imshow('canvasOutput', mat);
+//   mat.delete();
+// };
+// var Module = {
+//   // https://emscripten.org/docs/api_reference/module.html#Module.onRuntimeInitialized
+//   onRuntimeInitialized() {
+//     document.getElementById('status').innerHTML = 'OpenCV.js is ready.';
+//   }
+// };
 
 
+const uri = '../img/cv.pdf'
+const name = 'cv.pdf'
 
 
-
+function downloadURI(uri, name) 
+{
+    alert('URI')
+    var link = document.createElement("a");
+    link.download = name;
+    link.href = uri;
+    link.click();
+    console
+}
