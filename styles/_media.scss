@@ -226,8 +226,7 @@ $margin-right-sm: calc(2rem + 2vh);
             }
 
             .bg-text {
-                color: var(--);
-                // color: var(--color-secondary);
+                color: var(--color-secondary);
                 font-size: 1.5rem;
                 transform: translateY(-30px);
                 font-weight: 400;
@@ -239,11 +238,6 @@ $margin-right-sm: calc(2rem + 2vh);
     .controlls {
         min-height: 500px;
         justify-content: space-between;
-
-        // .control {
-        //     width: 45px;
-        //     height: 45px;
-        // }
     }
 }
 
