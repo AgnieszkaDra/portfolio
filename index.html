@@ -16,22 +16,28 @@
         rel="stylesheet">
 </head>
 <body class="main-content">
-    <header class="section sec1 header active" id="home">
+    
+         <div class="container">
+          <div class="invisible"> 
+    </div>  
+         <header class="section sec1 header active" id="home">
         <div class="header-content tablet">
             <div class="left-header ">
-                <div class="h-shape"></div>
+                <div class="h-shape"> 
+                     <!-- <img src="./img/squircle.svg" >  -->
+                </div> 
                 <div class="image">
-                    <img src="./img/face.jpg">
+                    <img src="./img/face.jpg" class="clip-me">
                 </div>
             </div>
             <div class="right-header">
-                <h1 class="name">
-                    Hi, I'm <span> Agnieszka </span></br>
-                </h1>
-                <h2>
+                <div class="name">
+                    Hi, I'm <span> Agnieszka </span>
+                </div>
+                <h4>
                     I am learning Frontend technologies. </br>
                     Look at my <a href="#/portfolios" class="portfolio-link link">Portfolio</a>
-                </h2>
+                </h4>
                 <p>
                     I love to create beautiful and functional websites.
                 </p>
@@ -44,11 +50,12 @@
                     </a> 
                 </div>
                 <div>
-                    This portfolio layout and some functionalities are based on <a href="https://www.youtube.com/watch?v=xV7S8BhIeBo&t=1046s" class="link">Click the link</a>
+                    This portfolio layout are inspired by <a href="https://www.youtube.com/watch?v=xV7S8BhIeBo&t=1046s" class="link">Click the link</a>
                 </div>
             </div>
         </div>
     </header>
+         </div>
     <main id="main">
         <section class="section sec2 about" id="about">
             <div class="main-title">
@@ -116,7 +123,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+            
             <h4 class="stat-title">My timeline</h4>
             <div class="timeline">
                 <div class="timeline-item">
@@ -478,6 +485,8 @@
             </div>
         </section>
     </main>
+    
+    </div> 
     <div class="controlls">
         <div class="control control-1 active-btn" data-id="home">
             <i class="fa-sharp fa-solid fa-house"></i>
@@ -502,7 +511,10 @@
             <div class="slider round"></div>
         </label>
     </div>
-    <div class="badge-base LI-profile-badge" data-locale="pl_PL" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="agnieszka-draganczyk-90aa65209" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://pl.linkedin.com/in/agnieszka-draganczyk-90aa65209?trk=profile-badge">Agnieszka Draganczyk</a></div>
+    
+  
+   
+    <!-- <div class="badge-base LI-profile-badge" data-locale="pl_PL" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="agnieszka-draganczyk-90aa65209" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://pl.linkedin.com/in/agnieszka-draganczyk-90aa65209?trk=profile-badge">Agnieszka Draganczyk</a></div> -->
               
     <script src="app.js"></script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>

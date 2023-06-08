@@ -1,10 +1,12 @@
 $transition-main: all .4s ease-in-out;
 $margin-right: calc(4rem + 4vh);
 $margin-right-sm: calc(2rem + 2vh);
+
+
 @media(max-width: 768px) {
-    .sec1 {
-        padding: 1rem;
-    }
+    // .sec1 {
+    //     padding: 1rem;
+    // }
 
     .sec2,
     .sec3,
@@ -18,14 +20,16 @@ $margin-right-sm: calc(2rem + 2vh);
        
     }
 
-    header{
-        width: calc(100% - $margin-right-sm);
-        margin-top: 1rem;
-    }
+    // header{
+    //     width: calc(100% - $margin-right-sm);
+    //     margin-top: 1rem;
+    // }
 
     .header-content {
-        display: grid;
-        grid-template-columns: 1fr;
+        // display: grid;
+        // grid-template-columns: repeat(1, 1fr);
+        // padding: 10%;
+        
         //margin-right: calc(2rem + 2vh);
         //min-height: 100vh;
 
@@ -35,25 +39,21 @@ $margin-right-sm: calc(2rem + 2vh);
             margin: 0 auto;
             //padding-right: 0;
             grid-gap: 1rem;
-           
+           height: 100%;
             grid-row: 1;
-            justify-content: space-around;
+            
 
-            .name {
-                font-size: calc(1rem + 1vh);
-            }
+           
 
             h2 {
                 font-size: calc(0.5rem + 1vh);
                 margin: 1.5rem 0;
             }
 
-            p {
-                font-size: calc(0.4rem + 1vh);
-            }
+           
 
            .btn-con{
-                width: 90%;
+               
                 .main-btn{
                     .btn-text{
                         padding: 0 0.5rem;
@@ -329,7 +329,7 @@ $margin-right-sm: calc(2rem + 2vh);
         display: grid;
         grid-template-columns: 1fr;
         //margin-right: calc(2rem + 2vh);
-        padding: 2rem;
+        padding: 5rem;
 
         //min-height: 100vh;
         .right-header {
@@ -443,12 +443,16 @@ $margin-right-sm: calc(2rem + 2vh);
 @media(min-width: 1000px) {
     .sec1 {
         padding: 0;
+        @include flex();
+        // width: calc(100% - 10rem);
+        // height: calc(100vh - 10rem);
     }
 
     .header-content {
-        padding: 0;
-        display: grid;
+        
+        @include flex();
         grid-template-columns: repeat(2, 1fr);
+        background-color: var(--color-primary);
 
         //min-height: 100vh;
         .left-header {
@@ -480,7 +484,7 @@ $margin-right-sm: calc(2rem + 2vh);
     //     font-size: 4.3rem;
     // }
 
-    .controlls {
-        right: 1%;
-    }
+    // .controlls {
+    //     right: 6rem;
+    // }
 }

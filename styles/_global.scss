@@ -1,6 +1,8 @@
 :root {
-    --color-primary: hsl(204, 70%, 54%) ;
-    --color-secondary: #223c83;
+    // --color-primary: hsl(204, 70%, 54%) ;
+    --color-primary: rgb(226, 195, 195)
+    --color-secondary: rgb(203, 211, 242)
+    // --color-secondary: #223c83;
     --color-white: #FFFFFF;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -29,11 +31,16 @@
 
 
 body {
-    background-color: var(--color-primary);
+    // background-color: var(--color-primary);
+    
     font-family: 'Poppins', sans-serif;
     font-size: 1.1rem;
     color: var(--color-white);
-    transition: $transition-main
+    transition: $transition-main;
+    width: 100%;
+    height: 100vh;
+    @include flex();
+    position: relative;
 }  
 
 a {
