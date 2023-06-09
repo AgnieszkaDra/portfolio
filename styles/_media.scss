@@ -2,6 +2,30 @@ $transition-main: all .4s ease-in-out;
 $margin-right: calc(4rem + 4vh);
 $margin-right-sm: calc(2rem + 2vh);
 
+.main-content {
+    display: grid;
+    grid-template-areas:
+            'headerContainer'
+            'aboutContainer'
+            'portfoliosContainer'
+            'contactContainer'
+            'controlls'
+            'theme'
+            ; 
+    width: 100%;
+    height: 100vh;
+
+}
+
+.header-container {
+    grid-area: headerContainer;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+
 
 @media(max-width: 768px) {
     // .sec1 {
@@ -25,60 +49,61 @@ $margin-right-sm: calc(2rem + 2vh);
     //     margin-top: 1rem;
     // }
 
-    .header-content {
-        // display: grid;
-        // grid-template-columns: repeat(1, 1fr);
-        // padding: 10%;
+    // .header-content {
+    //     // display: grid;
+    //     // grid-template-columns: repeat(1, 1fr);
+    //     // padding: 10%;
         
-        //margin-right: calc(2rem + 2vh);
-        //min-height: 100vh;
+    //     //margin-right: calc(2rem + 2vh);
+    //     //min-height: 100vh;
 
 
-        .right-header {
+    //     .right-header {
           
-            margin: 0 auto;
-            //padding-right: 0;
-            grid-gap: 1rem;
-           height: 100%;
-            grid-row: 1;
+    //         margin: 0 auto;
+    //         //padding-right: 0;
+    //         grid-gap: 1rem;
+    //        height: 100vh;
+    //        width: 50%;
+    //         grid-row: 1;
             
 
            
 
-            h2 {
-                font-size: calc(0.5rem + 1vh);
-                margin: 1.5rem 0;
-            }
+    //         h2 {
+    //             font-size: calc(0.5rem + 1vh);
+    //             margin: 1.5rem 0;
+    //         }
 
            
 
-           .btn-con{
+    //        .btn-con{
                
-                .main-btn{
-                    .btn-text{
-                        padding: 0 0.5rem;
-                    }
+    //             .main-btn{
+    //                 .btn-text{
+    //                     padding: 0 0.5rem;
+    //                 }
                     
-                }
-           }
+    //             }
+    //        }
 
-        }
+    //     }
 
-        .left-header {
-            padding-right: 0;
+    //     .left-header {
+    //         padding-right: 0;
            
 
-            .h-shape {
-                display: none;
-            }
+    //         .h-shape {
+    //             display: none;
+    //         }
 
-            .image {
-                height: 70%;
-                width: 70%;
-                margin: 0 auto;
-            }
-        }
-    }
+    //         .image {
+    //             height: 70%;
+    //             width: 70%;
+    //             margin: 0 auto;
+    //         }
+    //     }
+    // }
 
     .about-container {
         display: grid;

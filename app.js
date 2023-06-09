@@ -11,6 +11,8 @@ const toogleIcon = document.querySelector('#toggle-icon')
 const portfolioItems = document.querySelectorAll('.portfolio-item')
 const projectsAmount = document.querySelector('.projectsAmount')
 
+console.log(sections)
+
 function PageTransitions() {
     for (let i = 0; i < sectBtn.length; i++) {
         sectBtn[i].addEventListener('click', function () {
@@ -22,7 +24,9 @@ function PageTransitions() {
 
     allSections.addEventListener('click', (e) => {
         const id = e.target.dataset.id;
+        
         if (id) {
+            alert('id')
             sectBtns.forEach((btn) => {
                 btn.classList.remove('active')
             })

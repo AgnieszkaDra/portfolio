@@ -12,35 +12,30 @@ $margin-right-sm: calc(2rem + 2vh);
 $box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
 $br-sm-2: 14px;
 
-.container {
-    width: 100%;
-    height: 100vh;
+.header-container {
+    // width: 100%;
+    // height: 100vh;
     background-color: var(--color-primary);
-    position: relative;
-    filter: opacity(100%);
-    display: flex;
+    // position: relative;
+   
+    // @include flex()
 
 }
 
 @media(min-width:1000px){
-    .container {
+    .header-container {
         width: calc(100% - 10rem);
         height: calc(100vh - 10rem);
         
     }
 }
 
-header, main {
-    width: 100%;
-    height: 100vh;
-}
 
-header {
-    width: 50%;
-    height: 100vh;
+
+
     .header-content {
-        width: 100%;
-        height: 60%;
+        width: 50%;
+        height: 100vh;
         display: grid;
         grid-template-columns: repeat(1, 0.3fr);
         padding: 2%;
@@ -79,7 +74,7 @@ header {
                     }
         }
         
-            }
+        
         
     
 
@@ -114,9 +109,10 @@ header {
 .invisible {
     display: none;
 }
- .main-content {
-    display: flex;
-  }
+//  .main-content {
+//     display: flex;
+//     flex-direction: column;
+//   }
 
   .theme-switch-wrapper{
     display: none;
@@ -129,14 +125,14 @@ header {
   .invisible {
     display: block;
     background-image: url('../img/face.jpg');
-   width: 50%;
+   width: 100%;
    height: 100vh;
    background-position: center;
   }
     header {
        
-       width: 100%;
-       height: 100%;
+        width: 50%;
+   height: 100vh;
       
        
 
@@ -208,6 +204,10 @@ section div {
     display: none;
 }
 
+.header-container.sec1 {
+    display: none;
+}
+
 .active {
     display: block;
     animation: scaleAnim 1s ease-in-out;
@@ -230,7 +230,17 @@ section div {
     // transform: translateY(-50%);
     right: 1.5%;
     @include flex();
-    flex-direction: column;
+    // flex-direction: column;
+    div{
+        padding-bottom: 50%;
+        padding-right: 100%;
+       
+    }
+
+    div div {
+         padding-bottom: 50%;
+            padding-right: 100%; 
+    }
 
     .active-btn {
         background-color: var(--color-secondary) !important;
@@ -266,15 +276,14 @@ section div {
 // }
 
 .header-content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+   
     // min-height: 100vh;
     overflow: visible;
 
 
     .left-header {
-        @include flex();
-        position: relative;
+        // @include flex();
+        // position: relative;
 
 
 
