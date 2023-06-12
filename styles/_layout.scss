@@ -25,55 +25,11 @@
     grid-template-columns: 85% 15%;
     grid-template-areas:
         'headerContent controlls'; 
-   
     overflow-y: hidden;
-   
-    
-    
 }
 
 .header-content {
-     background-image: url('../img/face.jpg');
-     background-position: 90%;
-    
-    grid-area: headerContent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    .right-header {
-        margin: 10px;
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-        flex-direction: column;
-        > *{
-            margin-top: 15px;
-        }
-        .name {
-        font-size: calc(1rem + 1vh);
-        color: grey;
-        text-align: end;
-    }
-    h4 {
-        color: grey;
-        text-align: right
-    }
-    p {
-        display: block;
-        margin-top: 15px;
-        color: grey;
-        text-align: right;
-        margin-left: 50px;
-    }
-    .btn-con {
-        color: var(--color-grey2);
-        .main-btn {
-            border: 2px solid var(--color-grey2)
-            
-        }
-    }
-    }
+   grid-area: headerContent;
 }
 
 .invisible {
@@ -87,7 +43,7 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(203, 211, 242);
+    background-color: var(--color-blue);
      .control {
         padding: 1rem;
         cursor: pointer;
