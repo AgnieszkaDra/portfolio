@@ -1,0 +1,109 @@
+.main-content {
+    display: grid;
+    grid-template-areas:
+            'headerContainer'
+            'aboutContainer'
+            'portfoliosContainer'
+            'contactContainer'
+            'theme'
+            ; 
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+.header {
+    grid-area: headerContainer; 
+    width: 100%;
+    height: 100vh;
+}
+
+.header-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 85% 15%;
+    grid-template-areas:
+        'headerContent controlls'; 
+   
+    overflow-y: hidden;
+   
+    
+    
+}
+
+.header-content {
+     background-image: url('../img/face.jpg');
+     background-position: 90%;
+    
+    grid-area: headerContent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .right-header {
+        margin: 10px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+        flex-direction: column;
+        > *{
+            margin-top: 15px;
+        }
+        .name {
+        font-size: calc(1rem + 1vh);
+        color: grey;
+        text-align: end;
+    }
+    h4 {
+        color: grey;
+        text-align: right
+    }
+    p {
+        display: block;
+        margin-top: 15px;
+        color: grey;
+        text-align: right;
+        margin-left: 50px;
+    }
+    .btn-con {
+        color: var(--color-grey2);
+        .main-btn {
+            border: 2px solid var(--color-grey2)
+            
+        }
+    }
+    }
+}
+
+.invisible {
+    // grid-area: invisible;
+    width: 100%;
+}
+
+.controlls {
+    grid-area: controlls;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(203, 211, 242);
+     .control {
+        padding: 1rem;
+        cursor: pointer;
+        background-color: var(--color-grey4);
+        width: calc(5vh + 5px);
+                height: calc(5vh + 5px);
+                border-radius: 50%;
+                @include flex();
+                margin: .7rem 0;
+                box-shadow: $box-shadow-1;
+        
+                i {
+                    font-size: 1.2rem;
+                    color: var(--color-grey2);
+                    pointer-events: none;
+                }
+}
+
+}

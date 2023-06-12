@@ -8,13 +8,11 @@
     height: calc(100vh - 10rem);
   }
 }
-.header-content {
-  width: 50%;
+.header {
+  width: 100%;
   height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(1, 0.3fr);
-  padding: 2%;
 }
+
 .header-content .left-header {
   display: none;
 }
@@ -119,48 +117,6 @@ section div {
   }
 }
 
-.controlls {
-  position: absolute;
-  bottom: 0%;
-  right: 1.5%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.controlls div {
-  padding-bottom: 50%;
-  padding-right: 100%;
-}
-.controlls div div {
-  padding-bottom: 50%;
-  padding-right: 100%;
-}
-.controlls .active-btn {
-  background-color: var(--color-secondary) !important;
-  transition: all 0.4s ease-in-out;
-}
-.controlls .active-btn i {
-  color: var(--color-white) !important;
-}
-.controlls .control {
-  padding: 1rem;
-  cursor: pointer;
-  background-color: var(--color-grey4);
-  width: calc(5vh + 5px);
-  height: calc(5vh + 5px);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0.7rem 0;
-  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
-}
-.controlls .control i {
-  font-size: 1.2rem;
-  color: var(--color-grey2);
-  pointer-events: none;
-}
-
 /*Header-content*/
 .header-content {
   overflow: visible;
@@ -194,27 +150,6 @@ section div {
   object-fit: cover;
   transition: all 0.4s ease-in-out;
   clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-}
-.header-content .right-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.header-content .right-header .link {
-  text-decoration: underline;
-}
-.header-content .right-header p {
-  margin: 1.5rem 0;
-  line-height: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.header-content .right-header div:last-child {
-  color: var(--color-secondary);
-  justify-self: flex-start;
-  margin-top: 5vh;
 }
 
 /*About*/
@@ -876,17 +811,98 @@ a {
 
 .main-content {
   display: grid;
-  grid-template-areas: "headerContainer" "aboutContainer" "portfoliosContainer" "contactContainer" "controlls" "theme";
+  grid-template-areas: "headerContainer" "aboutContainer" "portfoliosContainer" "contactContainer" "theme";
+  width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+.header {
+  grid-area: headerContainer;
   width: 100%;
   height: 100vh;
 }
 
 .header-container {
-  grid-area: headerContainer;
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 85% 15%;
+  grid-template-areas: "headerContent controlls";
+  overflow-y: hidden;
+}
+
+.header-content {
+  background-image: url("../img/face.jpg");
+  background-position: 90%;
+  grid-area: headerContent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header-content .right-header {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.header-content .right-header > * {
+  margin-top: 15px;
+}
+.header-content .right-header .name {
+  font-size: calc(1rem + 1vh);
+  color: grey;
+  text-align: end;
+}
+.header-content .right-header h4 {
+  color: grey;
+  text-align: right;
+}
+.header-content .right-header p {
+  display: block;
+  margin-top: 15px;
+  color: grey;
+  text-align: right;
+  margin-left: 50px;
+}
+.header-content .right-header .btn-con {
+  color: var(--color-grey2);
+}
+.header-content .right-header .btn-con .main-btn {
+  border: 2px solid var(--color-grey2);
+}
+
+.invisible {
+  width: 100%;
+}
+
+.controlls {
+  grid-area: controlls;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(203, 211, 242);
+}
+.controlls .control {
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--color-grey4);
+  width: calc(5vh + 5px);
+  height: calc(5vh + 5px);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7rem 0;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+.controlls .control i {
+  font-size: 1.2rem;
+  color: var(--color-grey2);
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
