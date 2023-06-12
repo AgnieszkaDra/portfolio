@@ -118,9 +118,15 @@ $br-sm-2: 14px;
         }
         
         }
+        .portfolio-link {
+            text-align: right;
+            margin-left: 50px;
+            font-size: calc(0.5rem + 1vh);
+        }
         .portfolio-link a{
             text-decoration: underline;
         }
+
     }
 }
 
@@ -134,13 +140,7 @@ $br-sm-2: 14px;
     }
 }
 
-@media(min-width:1000px){
-    .header-container > * {
-        width: calc(100% - 10rem);
-        height: calc(100vh - 10rem);
-        
-    }
-}
+
 
 
         
@@ -176,9 +176,9 @@ header {
     }
 
 }
-.invisible {
-    display: none;
-}
+// .invisible {
+//     display: none;
+// }
 //  .main-content {
 //     display: flex;
 //     flex-direction: column;
@@ -268,9 +268,7 @@ section div {
     display: none;
 }
 
-.header-container.sec1 {
-    display: none;
-}
+
 
 .active {
     display: block;

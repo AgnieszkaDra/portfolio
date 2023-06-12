@@ -89,6 +89,11 @@
   transition: all 0.4s ease-in-out;
   z-index: -1;
 }
+.header-content .right-header .portfolio-link {
+  text-align: right;
+  margin-left: 50px;
+  font-size: calc(0.5rem + 1vh);
+}
 .header-content .right-header .portfolio-link a {
   text-decoration: underline;
 }
@@ -96,12 +101,6 @@
 @media (min-width: 768px) {
   .header-content .right-header .name, .header-content .right-header h4, .header-content .right-header p, .header-content .right-header .btn-con, .header-content .right-header .portfolio-link {
     text-align: center;
-  }
-}
-@media (min-width: 1000px) {
-  .header-container > * {
-    width: calc(100% - 10rem);
-    height: calc(100vh - 10rem);
   }
 }
 .header-content {
@@ -122,10 +121,6 @@ header .header-content .right-header div:last-child {
   text-align: center;
 }
 header .header-content .left-header .image img {
-  display: none;
-}
-
-.invisible {
   display: none;
 }
 
@@ -151,10 +146,6 @@ section div {
 .sec3,
 .sec4,
 .sec5 {
-  display: none;
-}
-
-.header-container.sec1 {
   display: none;
 }
 
@@ -812,9 +803,6 @@ body {
   transition: all 0.4s ease-in-out;
   width: 100%;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
 }
 
@@ -833,19 +821,26 @@ a {
   overflow-y: hidden;
 }
 
-.header {
-  grid-area: headerContainer;
-  width: 100%;
-  height: 100vh;
-}
-
 .header-container {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: 85% 15%;
-  grid-template-areas: "headerContent controlls";
+  grid-template-columns: 0% 85% 15%;
+  grid-template-areas: "invisible headerContent controlls";
   overflow-y: hidden;
+}
+.header-container .invisible {
+  grid-area: invisible;
+}
+.header-container .invisible img {
+  width: 0%;
+  height: 0%;
+}
+.header-container .header-content {
+  grid-area: headerContent;
+}
+.header-container .controlls {
+  grid-area: controlls;
 }
 
 @media (min-width: 768px) {
@@ -853,33 +848,31 @@ a {
     width: 100%;
     height: 100vh;
     display: grid;
-    grid-template-columns: 30% 60% 10%;
+    grid-template-columns: 20% 65% 15%;
     grid-template-areas: "invisible headerContent controlls";
     overflow-y: hidden;
   }
   .header-container .header-content {
+    grid-area: headerContent;
     background-image: none;
   }
-}
-.header-content {
-  grid-area: headerContent;
-}
-
-.invisible {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .invisible {
-    display: block;
+  .header-container .invisible {
     grid-area: invisible;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .invisible img {
+  .header-container .invisible img {
     width: 100%;
-    height: 50vh;
+    height: 30vh;
+  }
+  .header-container .controlls {
+    grid-area: controlls;
+  }
+}
+@media (min-width: 1000px) {
+  .invisible {
+    justify-content: end;
   }
 }
 .controlls {
@@ -1074,29 +1067,6 @@ a {
     padding-bottom: 0;
     padding-left: 0.5rem;
   }
-  .header-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 5rem;
-  }
-  .header-content .right-header {
-    grid-row: 1;
-    justify-content: space-between;
-  }
-  .header-content .right-header .btn-con {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-  }
-  .header-content .left-header .h-shape {
-    display: none;
-  }
-  .header-content .left-header .image {
-    height: 70%;
-    width: 70%;
-    margin: 0 auto;
-  }
   .sec2 .about-container {
     display: flex;
     justify-content: center;
@@ -1152,12 +1122,6 @@ a {
   }
 }
 @media (min-width: 1000px) {
-  .sec1 {
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   .header-content {
     display: flex;
     justify-content: center;
