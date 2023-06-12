@@ -28,13 +28,46 @@
     overflow-y: hidden;
 }
 
+@media(min-width:768px) {
+    
+    .header-container {
+        width: 100%;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 30% 60% 10%;
+        grid-template-areas:
+        'invisible headerContent controlls'; 
+        overflow-y: hidden; 
+        .header-content {
+            background-image: none;
+         }
+    }
+
+
+}
+
 .header-content {
    grid-area: headerContent;
 }
 
+
+
 .invisible {
-    // grid-area: invisible;
-    width: 100%;
+    display: none;
+   
+}
+
+@media(min-width: 768px) {
+    .invisible {
+        display: block; 
+      
+        grid-area: invisible;
+        @include flex();
+        img {
+         width: 100%;
+            height: 50vh; 
+        }
+    }
 }
 
 .controlls {
@@ -62,4 +95,11 @@
                 }
 }
 
+}
+
+@media(min-width: 768px) {
+    .controlls {
+        justify-content: center;
+        background-color: var(--color-white)
+    }
 }
