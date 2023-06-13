@@ -78,28 +78,28 @@ $margin-right-sm: calc(2rem + 2vh);
     .about-container_info {
        
 
-        .right-about {
-            grid-template-columns: 1fr;
-            padding-top: 2.5rem;
-            width: 100%;
-            //align-self: flex-start;
-            margin: 1rem;
-            @include flex();
-            flex-direction: column;
+    //     .right-about {
+    //         grid-template-columns: 1fr;
+    //         padding-top: 2.5rem;
+    //         width: 100%;
+    //         //align-self: flex-start;
+    //         margin: 1rem;
+    //         @include flex();
+    //         flex-direction: column;
             
-            .about-item {
-               //margin-right: $margin-right;
+    //         .about-item {
+    //            //margin-right: $margin-right;
                
-                width: 90%;
-                    .abt-text{
-                        .small-text{
-                            font-size: calc(0.4rem + 1vh);
-                        }
-                    }
-        }
+    //             width: 90%;
+    //                 .abt-text{
+    //                     .small-text{
+    //                         font-size: calc(0.4rem + 1vh);
+    //                     }
+    //                 }
+    //     }
 
        
-    } 
+    // } 
     .left-about {
             padding-right: 0;
             align-self: flex-start;

@@ -277,6 +277,33 @@ header {
         }
         
         }
+        .right-about {
+            @include flex();
+            flex-direction: column;
+          
+            margin-top: 2.5rem;
+            width: 100%;
+            //align-self: flex-start;
+            // margin: 1rem;
+          
+           
+            
+            .about-item {
+               //margin-right: $margin-right;
+               
+                width: 90%;
+                    .abt-text{
+                        .large-text {
+                            color: var(--color-blue);
+                        }
+                        .small-text{
+                            font-size: calc(0.4rem + 1vh);
+                        }
+                    }
+        }
+
+       
+    } 
     }
       
 }
