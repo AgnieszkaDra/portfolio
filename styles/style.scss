@@ -305,6 +305,75 @@ header {
        
     } 
     }
+    .about-stats {
+        @include flex();
+        flex-direction: column;
+        .stat-title {
+            font-size: calc(1rem + 1vh);
+            color: var(--color-blue);
+            margin-top: 2.5rem;
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .about-stats-con {
+            display: grid;
+            grid-template-rows: repeat(5, 60px);
+            align-self: flex-start;
+            width: 90%;
+            .progress-bars {
+                margin: 1rem;
+    
+                .progress-title {
+                    font-weight: 500;
+                    color: var(--color-grey5)
+                }
+    
+                .progress {
+                    height: 1rem;
+                    background-color: var(--color-sand);
+                    margin-bottom: 1rem;
+                    position: relative;
+                    border: 2px solid black;
+                }
+    
+                .progress.html {
+                    display: flex;
+                    width: 20%;
+                    height: 10px;
+                }
+    
+                .progress.css {
+                    display: flex;
+                    width: 40%;
+                    height: 10px;
+                }
+    
+                .progress.scss {
+                    display: flex;
+                    width: 40%;
+                    height: 10px;
+                }
+    
+                .progress.javascript {
+                    display: flex;
+                    width: 60%;
+                    height: 10px;
+                }
+    
+                .progress.api {
+                    display: flex;
+                    width: 70%;
+                    height: 10px;
+                }
+
+                .progress.react {
+                    display: flex;
+                    width: 75%;
+                    height: 10px;
+                }
+            }
+        }
+    }
       
 }
 
@@ -595,74 +664,8 @@ section div {
     
 }
 
-.about-stats {
-    padding-bottom: 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    margin: 1rem;
 
-    .about-stats-con {
-        display: grid;
-        grid-template-rows: repeat(5, 60px);
-        align-self: flex-start;
-        width: 90%;
 
-        .progress-bars {
-            margin: 1rem;
-
-            .progress-title {
-                font-weight: 500;
-            }
-
-            .progress {
-                height: 1rem;
-                background-color: var(--color-grey4);
-                margin-bottom: 1rem;
-                position: relative;
-                border: 2px solid black;
-            }
-
-            .progress.html {
-                display: flex;
-                width: 20%;
-                height: 10px;
-            }
-
-            .progress.css {
-                display: flex;
-                width: 40%;
-                height: 10px;
-            }
-
-            .progress.scss {
-                display: flex;
-                width: 40%;
-                height: 10px;
-            }
-
-            .progress.javascript {
-                display: flex;
-                width: 60%;
-                height: 10px;
-            }
-
-            .progress.api {
-                display: flex;
-                width: 70%;
-                height: 10px;
-            }
-        }
-    }
-}
-
-.stat-title {
-    text-transform: uppercase;
-    font-size: calc(2rem + 1vh);
-    text-align: center;
-    padding: 1rem 0;
-}
 
 /*Timeline*/
 .timeline {
