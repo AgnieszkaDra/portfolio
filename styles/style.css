@@ -389,6 +389,40 @@ header .header-content .left-header .image img {
     justify-self: flex-end;
   }
 }
+@media (min-width: 1000px) {
+  .about-container .about-container_info .right-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "myown  course learn";
+  }
+  .about-container .about-container_info .right-about .about-item {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+  }
+  .about-container .about-container_info .right-about .myown {
+    grid-area: myown;
+  }
+  .about-container .about-container_info .right-about .course {
+    grid-area: course;
+  }
+  .about-container .about-container_info .right-about .learn {
+    grid-area: learn;
+  }
+  .about-container .about-stats .about-stats-con {
+    align-self: center;
+  }
+  .about-container .timeline {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .about-container .timeline .timeline-item {
+    margin-top: 2rem;
+  }
+}
 .theme-switch-wrapper {
   display: none;
 }
