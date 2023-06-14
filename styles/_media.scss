@@ -240,9 +240,7 @@ $margin-right-sm: calc(2rem + 2vh);
 }
 
 .timeline{
-    display: grid;
-    grid-template-columns: 1fr;
-    padding-bottom: 6rem;
+   
         .timeline-item{
             .h5{
                text-align: justify;
