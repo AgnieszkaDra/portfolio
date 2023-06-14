@@ -211,3 +211,12 @@
         background-color: var(--color-white)
     }
 }
+
+.controlls.about {
+    position: fixed;
+    justify-content: space-around;
+    top: 0;
+    left: 0;
+    width: 100%;
+    flex-direction: row;
+}

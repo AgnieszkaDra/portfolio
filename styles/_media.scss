@@ -342,31 +342,7 @@ $margin-right-sm: calc(2rem + 2vh);
     // }
 
     .sec2{
-    .about-container_info {
-    //margin-right: calc(2rem + 3vh);
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: 1rem;
-
-    .left-about {
-        padding: 0;
-        align-self: flex-start;
-    }
-
-    .right-about {
-      
-        align-self: flex-start;
-        margin-right: calc(2rem + 3vh);
-
-        .about-item {
-            @include flex();
-          
-        }
-    }
-}
+  
 
 .timeline {
     .timeline-item{
