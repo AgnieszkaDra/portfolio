@@ -1,6 +1,18 @@
 const sections = document.querySelectorAll('.section')
 const sectBtns = document.querySelectorAll('.controlls')
 const sectBtn = document.querySelectorAll('.control')
+const secHeader = document.querySelector('.section.header')
+const homeControlls = document.querySelector('.controlls.home')
+const homeBtns = homeControlls.querySelectorAll('.control')
+const secAbout = document.querySelector('.section.about')
+const aboutControlls = document.querySelector('.controlls.about')
+const aboutBtns = aboutControlls.querySelectorAll('.control')
+const secPortfolio = document.querySelector('.section.portfolio')
+const portfolioControlls = document.querySelector('.controlls.portfolio')
+const portfolioBtns = portfolioControlls.querySelectorAll('.control')
+const secContact = document.querySelector('.section.contact')
+const contactControlls = document.querySelector('.controlls.contact')
+const contactBtns = contactControlls.querySelectorAll('.control')
 const allSections = document.querySelector('.main-content')
 const toggleIcon = document.getElementById('toggle-icon')
 const portfolioLink = document.querySelector('.portfolio-link')
@@ -15,10 +27,11 @@ const projectsAmountCourse = document.querySelector('.projectsAmountCourse')
 
 console.log(sections)
 
-function PageTransitions() {
-    for (let i = 0; i < sectBtn.length; i++) {
-        sectBtn[i].addEventListener('click', function () {
-            let currentBtn = document.querySelectorAll('.active-btn')
+function pageTransitions(btns, sec) {
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener('click', function () {
+            alert('click')
+            let currentBtn = sec.querySelectorAll('.active-btn')
             currentBtn[0].className = currentBtn[0].className.replace('active-btn', '')
             this.className += ' active-btn'
         })
@@ -28,8 +41,8 @@ function PageTransitions() {
         const id = e.target.dataset.id;
         
         if (id) {
-            alert('id')
-            sectBtns.forEach((btn) => {
+          
+            btns.forEach((btn) => {
                 btn.classList.remove('active')
             })
             e.target.classList.add('active')
@@ -43,7 +56,12 @@ function PageTransitions() {
     })
 }
 
-PageTransitions()
+pageTransitions(homeBtns, secHeader)
+pageTransitions(aboutBtns, secAbout)
+pageTransitions(portfolioBtns, secPortfolio)
+pageTransitions(contactBtns, secContact)
+
+
 
 
 
