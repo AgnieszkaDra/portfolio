@@ -227,15 +227,8 @@ header .header-content .left-header .image img {
   z-index: -1;
 }
 .about-container .about-container_info .right-about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   margin-top: 2.5rem;
   width: 100%;
-}
-.about-container .about-container_info .right-about .about-item {
-  width: 90%;
 }
 .about-container .about-container_info .right-about .about-item .abt-text {
   display: flex;
@@ -354,26 +347,23 @@ header .header-content .left-header .image img {
 }
 
 @media (min-width: 769px) {
-  .about-container .about-container_info .right-about {
-    background-color: yellow;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: repeat(2, 300px);
-    grid-template-areas: "myown myown course course" ".... learn learn ....";
+  .about-container {
+    margin: calc(3rem + 1vh);
   }
-  .about-container .about-container_info .right-about .about-item {
-    width: 100%;
-    height: 100%;
-    padding: 10%;
+  .about-container .about-container_title h2 {
+    font-size: calc(3rem + 2vh);
   }
-  .about-container .about-container_info .right-about .myown {
-    grid-area: myown;
+  .about-container .about-container_title h2 span {
+    font-size: calc(3rem + 2vh);
   }
-  .about-container .about-container_info .right-about .course {
-    grid-area: course;
+  .about-container .about-container_title .bg-text {
+    display: none;
   }
-  .about-container .about-container_info .right-about .learn {
-    grid-area: learn;
+  .about-container .about-container_info .left-about h4 {
+    font-size: calc(0.8rem + 2vh);
+  }
+  .about-container .about-stats .stat-title {
+    font-size: calc(0.8rem + 2vh);
   }
   .about-container .about-stats .about-stats-con {
     align-self: center;
@@ -423,6 +413,11 @@ header .header-content .left-header .image img {
     margin-top: 2rem;
   }
 }
+.portfolio-container {
+  margin: calc(1rem + 1vh);
+  margin-top: 6rem;
+}
+
 .theme-switch-wrapper {
   display: none;
 }
@@ -1038,6 +1033,12 @@ a {
     grid-area: controlls;
   }
 }
+.about-container .about-container .about-container_info .right-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .about-container .invisible {
   grid-area: invisible;
 }
@@ -1052,6 +1053,29 @@ a {
   grid-area: controlls;
 }
 
+@media (min-width: 769px) {
+  .about-container .right-about {
+    background-color: yellow;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: repeat(2, 300px);
+    grid-template-areas: "myown myown course course" ".... learn learn ....";
+  }
+  .about-container .right-about .about-item {
+    width: 100%;
+    height: 100%;
+    padding: 10%;
+  }
+  .about-container .right-about .myown {
+    grid-area: myown;
+  }
+  .about-container .right-about .course {
+    grid-area: course;
+  }
+  .about-container .right-about .learn {
+    grid-area: learn;
+  }
+}
 @media (min-width: 1000px) {
   .invisible {
     justify-content: end;
@@ -1091,6 +1115,24 @@ a {
   }
 }
 .controlls.about {
+  position: fixed;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  width: 100%;
+  flex-direction: row;
+}
+
+.controlls.portfolio {
+  position: fixed;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  width: 100%;
+  flex-direction: row;
+}
+
+.controlls.contact {
   position: fixed;
   justify-content: space-around;
   top: 0;

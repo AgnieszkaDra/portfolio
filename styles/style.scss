@@ -311,8 +311,8 @@ header {
         }
 
         .right-about {
-            @include flex();
-            flex-direction: column;
+            // @include flex();
+            // flex-direction: column;
 
             margin-top: 2.5rem;
             width: 100%;
@@ -324,7 +324,7 @@ header {
             .about-item {
                 //margin-right: $margin-right;
 
-                width: 90%;
+               
 
                 .abt-text {
                     display: flex;
@@ -470,39 +470,62 @@ header {
     }
 
 }
+
 @media(min-width: 769px) {
 
     .about-container {
+        margin: calc(3rem + 1vh);
+        .about-container_title {
+            h2 {
+                font-size: calc(3rem + 2vh);
+               span {
+                font-size: calc(3rem + 2vh);
+               }
+            } 
+            .bg-text {
+                display: none;
+            }
+            
+            
+        }
        
         .about-container_info {
-           
-            .right-about {
-                .about-item {
-                    width: 100%;
-                    height: 100%;
-                    padding: 10%;
+            .left-about {
+                h4 {
+                    font-size: calc(0.8rem + 2vh);
                 }
- .myown {
-                    grid-area: myown;
-                }
-                .course {
-                    grid-area: course;
-                }
-                .learn {
-                    grid-area: learn;
-                }
-
-                background-color: yellow; 
-                display: grid;
-                grid-template-columns: 25% 25% 25% 25%;
-                grid-template-rows: repeat(2, 300px);
-                grid-template-areas:
-               "myown myown course course"
-               ".... learn learn ....";
-               
             }
+           
+//             .right-about {
+//                 .about-item {
+//                     width: 100%;
+//                     height: 100%;
+//                     padding: 10%;
+//                 }
+//  .myown {
+//                     grid-area: myown;
+//                 }
+//                 .course {
+//                     grid-area: course;
+//                 }
+//                 .learn {
+//                     grid-area: learn;
+//                 }
+
+//                 background-color: yellow; 
+//                 display: grid;
+//                 grid-template-columns: 25% 25% 25% 25%;
+//                 grid-template-rows: repeat(2, 300px);
+//                 grid-template-areas:
+//                "myown myown course course"
+//                ".... learn learn ....";
+               
+//             }
         }
         .about-stats {
+            .stat-title {
+                font-size: calc(0.8rem + 2vh);
+            }
             .about-stats-con {
                 align-self: center;
             }
@@ -569,6 +592,11 @@ header {
     
         }
     }
+}
+
+.portfolio-container {
+    margin: calc(1rem + 1vh);
+    margin-top: 6rem;
 }
 
 
