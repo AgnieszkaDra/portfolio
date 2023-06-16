@@ -459,7 +459,6 @@ header .header-content .left-header .image img {
 }
 .portfolio-container h2 {
   margin: 1rem 0;
-  font-size: calc(0.5rem + 1vh);
   text-transform: uppercase;
   color: var(--color-blue);
   text-align: center;
@@ -498,13 +497,6 @@ header .header-content .left-header .image img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 1fr;
-  height: 400px;
-}
-.portfolio-container .portfolios .portfolio-item.myown .imagecon.two .twoimages {
-  flex-direction: column;
-  width: 80%;
-  height: 50%;
 }
 .portfolio-container .portfolios .portfolio-item.myown .hover-items {
   width: 100%;
@@ -524,11 +516,19 @@ header .header-content .left-header .image img {
   transition: all 0.4s ease-in-out;
 }
 .portfolio-container .portfolios .portfolio-item.myown .hover-items .technologies-con {
-  margin-bottom: 2rem;
-  font-weight: 200;
-  width: 100px;
-  height: 100px;
-  background-color: pink;
+  width: 90%;
+}
+.portfolio-container .portfolios .portfolio-item.myown .hover-items .technologies-con .technologies-con-title {
+  color: var(--color-sand);
+  margin-bottom: 1rem;
+}
+.portfolio-container .portfolios .portfolio-item.myown .hover-items .technologies-con .technologies-list {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  list-style-type: circle;
+  list-style-image: linear-gradient(--color-sand);
+  color: var(--color-blue);
 }
 .portfolio-container .portfolios .portfolio-item.myown .hover-items .technologies-con .technologies-list.two-col {
   display: grid;
@@ -567,7 +567,7 @@ header .header-content .left-header .image img {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 1rem;
+  margin: 0 1rem 1rem 1rem;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
@@ -583,12 +583,14 @@ header .header-content .left-header .image img {
   color: var(--color-primary);
 }
 .portfolio-container .portfolio-item.myown:hover .hover-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   opacity: 1;
   transform: scale(100%);
 }
 .portfolio-container .portfolio-item.myown:hover .hover-items .technologies-con h3 {
-  font-size: 1rem;
   color: black;
 }
 
