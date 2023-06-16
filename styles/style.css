@@ -129,8 +129,9 @@ header .header-content .left-header .image img {
 }
 
 .about-container {
-  margin: calc(1rem + 1vh);
   margin-top: 6rem;
+  overflow: hidden;
+  width: 100%;
 }
 .about-container .about-container_title {
   position: relative;
@@ -171,14 +172,16 @@ header .header-content .left-header .image img {
   color: var(--color-blue);
   text-align: center;
 }
-.about-container .about-container_info .left-about p {
-  padding: 0;
+.about-container .about-container_info .left-about div {
+  padding: 10px;
   text-align: justify;
   margin: 1rem 0;
   line-height: 2rem;
-  color: var(--color-grey5);
+  width: 100%;
   display: block;
+  color: var(--color-grey5);
   overflow: hidden;
+  word-wrap: break-word;
 }
 .about-container .about-container_info .btn-con {
   color: var(--color-grey5);
@@ -416,6 +419,43 @@ header .header-content .left-header .image img {
 .portfolio-container {
   margin: calc(1rem + 1vh);
   margin-top: 6rem;
+}
+.portfolio-container .portfolio-title h2 {
+  color: var(--color-sand);
+  text-align: center;
+  position: relative;
+  text-transform: uppercase;
+  font-size: calc(2rem + 1vh);
+  font-size: 700;
+  z-index: 2;
+  margin-top: 1rem;
+}
+.portfolio-container .portfolio-title span {
+  color: var(--color-secondary);
+  z-index: 2;
+  font-size: calc(2rem + 1vh);
+  position: relative;
+}
+.portfolio-container .portfolio-title .bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-grey5);
+  transition: all 0.4s ease-in-out;
+  z-index: 1;
+  font-weight: 800;
+  font-size: calc(1rem + 1vh);
+  text-transform: uppercase;
+  text-shadow: var(--color-secondary) 1px 0 10px;
+}
+.portfolio-container p {
+  padding: 0;
+  text-align: justify;
+  margin: 1rem 0;
+  line-height: 2rem;
+  color: var(--color-grey5);
+  display: block;
+  overflow: hidden;
 }
 
 .theme-switch-wrapper {
@@ -808,20 +848,6 @@ section div {
 
 .portfolio {
   text-align: center;
-  position: relative;
-}
-.portfolio h2 {
-  position: relative;
-  text-transform: uppercase;
-  font-size: calc(2rem + 1vh);
-  font-size: 700;
-  z-index: 2;
-  margin-top: 1rem;
-}
-.portfolio h2 span {
-  color: var(--color-secondary);
-  z-index: 2;
-  font-size: calc(2rem + 1vh);
   position: relative;
 }
 .portfolio .bg-text {
