@@ -410,9 +410,9 @@ $margin-right-sm: calc(2rem + 2vh);
 
     .header-content {
         
-        @include flex();
-        grid-template-columns: repeat(2, 1fr);
-        background-color: var(--color-primary);
+        // @include flex();
+        // grid-template-columns: repeat(2, 1fr);
+        // background-color: var(--color-primary);
 
         //min-height: 100vh;
         .left-header {
