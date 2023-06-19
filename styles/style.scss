@@ -29,16 +29,7 @@ position: absolute;
                 top: 0;
                 @include flex();
     .h-shape {
-          background-color: var(--color-sand);
-               
-                width: 80%;
-                height: 80%;
-                // z-index: 1;
-                // clip-path: polygon(0 0, 46% 0, 79% 100%, 0% 100%);
-                @include flex();
-                transition: $transition-main; 
-                z-index: 1;
-                
+        display: none;
     }
             
                 // transition: $transition-main;

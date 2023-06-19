@@ -16,14 +16,7 @@
   align-items: center;
 }
 .header-content .header-background .h-shape {
-  background-color: var(--color-sand);
-  width: 80%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.4s ease-in-out;
-  z-index: 1;
+  display: none;
 }
 .header-content .header-main {
   width: 100%;
