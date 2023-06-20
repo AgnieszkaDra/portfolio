@@ -99,6 +99,23 @@
     }
 }
 
+@media(min-width:1000px) {
+    .header-container {
+
+        .main-photo {
+
+            img {
+
+                height: 50vh;
+                
+            }
+            
+        }
+
+    }
+
+}
+
 .about-container {
 
     .about-container .about-container_info .right-about {
@@ -248,65 +265,4 @@
     }
 }
 
-.controlls {
-    grid-area: controlls;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--color-blue);
 
-
-    .control {
-        padding: 1rem;
-        cursor: pointer;
-        background-color: var(--color-grey4);
-        width: calc(5vh + 5px);
-        height: calc(5vh + 5px);
-        border-radius: 50%;
-        @include flex();
-        margin: .7rem 0;
-        box-shadow: $box-shadow-1;
-
-        i {
-            font-size: 1.2rem;
-            color: var(--color-grey2);
-            pointer-events: none;
-        }
-    }
-
-}
-
-@media(min-width: 768px) {
-    .controlls {
-        justify-content: center;
-        background-color: var(--color-white)
-    }
-}
-
-.controlls.about {
-    position: fixed;
-    justify-content: space-around;
-    top: 0;
-    left: 0;
-    width: 100%;
-    flex-direction: row;
-}
-
-.controlls.portfolio {
-    position: fixed;
-    justify-content: space-around;
-    top: 0;
-    left: 0;
-    width: 100%;
-    flex-direction: row;
-}
-
-.controlls.contact {
-    position: fixed;
-    justify-content: space-around;
-    top: 0;
-    left: 0;
-    width: 100%;
-    flex-direction: row;
-}

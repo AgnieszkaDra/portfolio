@@ -290,19 +290,7 @@ $margin-right-sm: calc(2rem + 2vh);
     }
 
 @media(min-width: 769px) {
-    .sec1 {
-        padding: 0.5rem;
-    }
-
-    .sec2,
-    .sec3,
-    .sec4,
-    .sec5 {
-        padding-top: 2rem;
-        padding-bottom: 0;
-        //padding-right: 6rem;
-        padding-left: 0.5rem;
-    }
+   
 
     // .main-title h2 .bg-text {
     //     display: none;

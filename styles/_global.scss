@@ -1,8 +1,7 @@
 :root {
     // --color-primary: hsl(204, 70%, 54%) ;
-    --color-primary: rgb(226, 195, 195)
-    --color-secondary: rgb(203, 211, 242)
-    // --color-secondary: #223c83;
+    --color-primary: rgb(226, 195, 195);
+    --color-secondary: rgb(255,182,193);
     --color-white: #FFFFFF;
     --color-black: #000;
     --color-grey0: #f8f8f8;
@@ -53,3 +52,8 @@ a {
     color: inherit;
     font-family: inherit;
 }
+
+.portfolio-link {
+    text-decoration: underline;
+}
+
