@@ -49,27 +49,64 @@
   left: 0;
   width: 100%;
   flex-direction: row;
+  overflow: hidden;
 }
 
-.theme-switch-wrapper {
-  display: flex;
-  align-items: center;
-  z-index: 100;
-  position: absolute;
-  right: 20%;
-  top: 3%;
+@media (min-width: 768px) {
+  .controlls.about,
+.controlls.about,
+.controlls.portfolio,
+.controlls.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
 }
-.theme-switch-wrapper span {
+.theme-switch-wrapper.home {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 3%;
+  left: 5%;
+  width: 100%;
+  flex-direction: row;
+}
+.theme-switch-wrapper.home span {
   margin-right: 10px;
   font-size: 1rem;
 }
-.theme-switch-wrapper i {
+.theme-switch-wrapper.home i {
   color: var(--color-grey4);
 }
 
+.theme-switch-wrapper.about, .theme-switch-wrapper.contact, .theme-switch-wrapper.portfolio {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 10%;
+  left: 12%;
+  width: 100%;
+  flex-direction: row;
+}
+
 @media (min-width: 769px) {
-  .theme-switch-wrapper {
-    right: 3%;
+  .header .header-container {
+    position: relative;
+  }
+  .header .header-container .theme-switch-wrapper.home {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 10%;
+  }
+}
+@media (min-width: 768px) {
+  .theme-switch-wrapper.about, .theme-switch-wrapper.portfolio, .theme-switch-wrapper.contact {
+    display: flex;
+    position: absolute;
+    right: 0;
     top: 10%;
   }
 }
@@ -265,17 +302,8 @@ input:checked + .slider::before {
     clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
   }
 }
-header {
-  color: var(--color-white);
-  overflow: hidden;
-  z-index: 100;
-}
-header h2 {
-  color: var(--color-secondary);
-}
-
 .about-container {
-  margin-top: 6rem;
+  margin-top: 8rem;
   overflow: hidden;
   width: 100%;
 }
@@ -826,7 +854,7 @@ header h2 {
 .portfolio-container .portfolios .portfolio-item.course .hover-items .icons .icon:hover i {
   color: var(--color-primary);
 }
-.portfolio-container .portfolio-item.myown:active .hover-items {
+.portfolio-container .portfolio-item.myown:hover .hover-items {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -834,10 +862,10 @@ header h2 {
   opacity: 1;
   transform: scale(100%);
 }
-.portfolio-container .portfolio-item.myown:active .hover-items .technologies-con h3 {
+.portfolio-container .portfolio-item.myown:hover .hover-items .technologies-con h3 {
   color: black;
 }
-.portfolio-container .portfolio-item.course:active .hover-items {
+.portfolio-container .portfolio-item.course:hover .hover-items {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -845,7 +873,7 @@ header h2 {
   opacity: 1;
   transform: scale(100%);
 }
-.portfolio-container .portfolio-item.course:active .hover-items .technologies-con h3 {
+.portfolio-container .portfolio-item.course:hover .hover-items .technologies-con h3 {
   color: black;
 }
 

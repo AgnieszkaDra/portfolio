@@ -72,17 +72,34 @@ $br-sm-2: 14px;
     left: 0;
     width: 100%;
     flex-direction: row;
+    overflow: hidden;
 }
 
-.theme-switch-wrapper {
+@media(min-width: 768px) {
 
+    .controlls.about,
+    .controlls.about,
+    .controlls.portfolio,
+    .controlls.contact {
+
+        @include flex();
+        width: 100%;
+        justify-content: center;
+        
+    }
+}
+
+.theme-switch-wrapper.home {
+
+    position: fixed;
     display: flex;
-    align-items: center;
-    z-index: 100;
-    position: absolute;
-    right: 20%;
+    justify-content: center;
     top: 3%;
+    left: 5%;
+    width: 100%;
+    flex-direction: row;
 
+   
     span {
         margin-right: 10px;
         font-size: 1rem;
@@ -94,16 +111,72 @@ $br-sm-2: 14px;
 
 }
 
+.theme-switch-wrapper.about, .theme-switch-wrapper.contact, .theme-switch-wrapper.portfolio {
+
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    top: 10%;
+    left: 12%;
+    width: 100%;
+    flex-direction: row;
+
+   
+    // span {
+    //     margin-right: 10px;
+    //     font-size: 1rem;
+    // }
+
+    // i {
+    //     color: var(--color-grey4);
+    // }
+
+}
+
 @media(min-width:769px) {
 
-    .theme-switch-wrapper {
+    .header {
 
-        right: 3%;
+        .header-container {
+
+            position: relative;
+
+            
+            .theme-switch-wrapper.home {
+        
+                display: flex;
+                position: absolute;
+                right: 0;
+                top: 10%;
+
+            }
+
+        }
+
+
+    }
+
+   
+  
+        
+
+    
+
+}          
+
+@media(min-width:768px) {
+
+    .theme-switch-wrapper.about, .theme-switch-wrapper.portfolio, .theme-switch-wrapper.contact {
+
+        display: flex;
+        position: absolute;
+        right: 0;
         top: 10%;
 
     }
 
 }
+
 
 .toggle-text {
 
@@ -185,10 +258,6 @@ input:checked+.slider::before {
     margin-right: 5px;
 
 }
-
-
- 
-
 
 .header-content {
 
@@ -380,36 +449,13 @@ input:checked+.slider::before {
 
 
 
-header {
-    color: var(--color-white);
-    overflow: hidden;
-    z-index: 100;
-
-    h2 {
-        color: var(--color-secondary);
-    }
-
-    // .header-content {
-    //     .right-header div:last-child {
-    //         color: var(--color-secondary);
-    //         justify-self: flex-start;
-    //         // margin-top: 5vh;
-    //         text-align: center;
-    //     }
-
-    //     .left-header .image img {
-    //         display: none;
-    //     }
-    // }
-
-}
 
 
 
 .about-container {
 
 
-    margin-top: 6rem;
+    margin-top: 8rem;
     overflow: hidden;
     width: 100%;
 
@@ -1150,7 +1196,7 @@ header {
     }
 
 
-    .portfolio-item.myown:active {
+    .portfolio-item.myown:hover {
 
 
         .hover-items {
@@ -1168,7 +1214,7 @@ header {
         }
     }
 
-    .portfolio-item.course:active {
+    .portfolio-item.course:hover {
         .hover-items {
             @include flex();
             background-color: black;
