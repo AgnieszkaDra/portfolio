@@ -92,10 +92,9 @@ $br-sm-2: 14px;
 .theme-switch-wrapper.home {
 
     position: fixed;
-    display: flex;
-    justify-content: center;
+    @include flex();
+    right: 5%;
     top: 3%;
-    left: 5%;
     width: 100%;
     flex-direction: row;
 
@@ -122,14 +121,14 @@ $br-sm-2: 14px;
     flex-direction: row;
 
    
-    // span {
-    //     margin-right: 10px;
-    //     font-size: 1rem;
-    // }
+    span {
+        margin-right: 10px;
+        font-size: 1rem;
+    }
 
-    // i {
-    //     color: var(--color-grey4);
-    // }
+    i {
+        color: var(--color-grey4);
+    }
 
 }
 
@@ -145,9 +144,11 @@ $br-sm-2: 14px;
             .theme-switch-wrapper.home {
         
                 display: flex;
+                justify-content: flex-end;
                 position: absolute;
-                right: 0;
-                top: 10%;
+                left: 0%;
+                right: 5%;
+                top: 5%;
 
             }
 
@@ -436,26 +437,9 @@ input:checked+.slider::before {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .about-container {
 
-
-    margin-top: 8rem;
+    margin-top: 9rem;
     overflow: hidden;
     width: 100%;
 

@@ -18,7 +18,7 @@ const toggleIcon = document.getElementById('toggle-icon')
 const portfolioLink = document.querySelector('.portfolio-link')
 const bgText = document.querySelector('.bg-text')
 const mql = window.matchMedia("(max-width: 768px)")
-const mqltablet = window.matchMedia("(min-width:768px)")
+const mqltablet = window.matchMedia("(min-width:769px)")
 const toogleIcon = document.querySelector('#toggle-icon')
 const portfolioItemsMyOwn = document.querySelectorAll('.portfolio-item.myown')
 const portfolioItemsCourse = document.querySelectorAll('.portfolio-item.course')
@@ -117,7 +117,7 @@ toogleSwitch.addEventListener('change', switchTheme)
 
 if (mql.matches) {
     toogleIcon.style.display = 'none'
-    bgText.style.display = 'none'
+    
 
 } else if (mqltablet.matches) {
     toogleIcon.style.display = 'block'
