@@ -64,7 +64,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
     justify-content: space-around;
   }
 }
@@ -196,6 +195,12 @@ input:checked + .slider::before {
 .fas {
   font-size: 30px;
   margin-right: 5px;
+}
+
+header, section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-content {
@@ -334,11 +339,11 @@ input:checked + .slider::before {
   overflow-x: hidden;
   width: 100%;
 }
-.about-container .about-container_title {
+.about-container .about-container__title {
   position: relative;
   margin-top: 1rem;
 }
-.about-container .about-container_title h2 {
+.about-container .about-container__title h2 {
   color: var(--color-sand);
   text-align: center;
   position: relative;
@@ -347,7 +352,7 @@ input:checked + .slider::before {
   font-size: 700;
   z-index: 2;
 }
-.about-container .about-container_title .bg-text {
+.about-container .about-container__title .bg-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -359,21 +364,21 @@ input:checked + .slider::before {
   text-transform: uppercase;
   text-shadow: var(--color-blue) 1px 0 10px;
 }
-.about-container .about-container_info {
+.about-container .about-container__info {
   margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.about-container .about-container_info .left-about h4 {
+.about-container .about-container__info .left-about h4 {
   margin: 1rem 0;
   font-size: calc(0.5rem + 1vh);
   text-transform: uppercase;
   color: var(--color-blue);
   text-align: center;
 }
-.about-container .about-container_info .left-about p {
+.about-container .about-container__info .left-about p {
   padding: 10px;
   text-align: justify;
   margin: 1rem 0;
@@ -384,13 +389,13 @@ input:checked + .slider::before {
   overflow: hidden;
   word-wrap: break-word;
 }
-.about-container .about-container_info .left-about .btn-con {
+.about-container .about-container__info .left-about .btn-con {
   color: var(--color-grey5);
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.about-container .about-container_info .left-about .btn-con__link {
+.about-container .about-container__info .left-about .btn-con__link {
   border-radius: 30px;
   color: var(--color-white);
   font-weight: 600;
@@ -400,10 +405,10 @@ input:checked + .slider::before {
   overflow: hidden;
   background-color: var(--color-grey5);
 }
-.about-container .about-container_info .left-about .btn-con__link__text {
+.about-container .about-container__info .left-about .btn-con__link__text {
   padding: 0 2rem;
 }
-.about-container .about-container_info .left-about .btn-con__link__icon {
+.about-container .about-container__info .left-about .btn-con__link__icon {
   background-color: var(--color-blue);
   display: flex;
   justify-content: center;
@@ -412,22 +417,42 @@ input:checked + .slider::before {
   padding: 1rem;
   transform: translateX(10px);
 }
-.about-container .about-container_info .right-about {
+.about-container .about-container__info .right-about {
   margin-top: 2.5rem;
   width: 100%;
 }
-.about-container .about-container_info .right-about .about-item .abt-text {
+.about-container .about-container__info .right-about .about-item {
+  border: 2px solid var(--color-blue);
+  margin: 0.5rem;
+}
+.about-container .about-container__info .right-about .about-item .abt-text {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 1rem;
+  color: var(--color-grey4);
 }
-.about-container .about-container_info .right-about .about-item .abt-text .large-text {
+.about-container .about-container__info .right-about .about-item .abt-text .large-text {
   color: var(--color-blue);
+  margin-right: 0.5rem;
 }
-.about-container .about-container_info .right-about .about-item .abt-text .small-text {
+.about-container .about-container__info .right-about .about-item .abt-text .small-text {
   font-size: calc(0.4rem + 1vh);
   overflow: hidden;
+}
+@media (min-width: 769px) {
+  .about-container .about-container__info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .about-container .about-container__info .left-about {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+  }
 }
 .about-container .about-stats {
   display: flex;
@@ -461,47 +486,38 @@ input:checked + .slider::before {
   margin-bottom: 1rem;
   position: relative;
   border: 2px solid black;
+  display: flex;
+  height: 10px;
 }
 .about-container .about-stats .about-stats-con .progress-bars .progress.html {
-  display: flex;
   width: 20%;
-  height: 10px;
 }
 .about-container .about-stats .about-stats-con .progress-bars .progress.css {
-  display: flex;
   width: 40%;
-  height: 10px;
 }
 .about-container .about-stats .about-stats-con .progress-bars .progress.scss {
-  display: flex;
   width: 40%;
-  height: 10px;
 }
 .about-container .about-stats .about-stats-con .progress-bars .progress.javascript {
-  display: flex;
   width: 60%;
-  height: 10px;
 }
 .about-container .about-stats .about-stats-con .progress-bars .progress.api {
-  display: flex;
   width: 70%;
-  height: 10px;
 }
 .about-container .about-stats .about-stats-con .progress-bars .progress.react {
-  display: flex;
   width: 75%;
-  height: 10px;
 }
 .about-container .timeline {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  padding-bottom: 6rem;
+  padding-bottom: 1rem;
 }
 .about-container .timeline .timeline-item {
   position: relative;
   padding-left: 5rem;
   border-left: 1px solid var(--color-grey5);
+  margin-bottom: 1rem;
 }
 .about-container .timeline .timeline-item .tl-icon {
   position: absolute;
@@ -1288,13 +1304,6 @@ a {
   text-decoration: underline;
 }
 
-.main-content {
-  display: grid;
-  grid-template-areas: "headerContainer" "aboutContainer" "portfoliosContainer" "contactContainer" "theme";
-  width: 100vw;
-  height: 100vh;
-}
-
 .sec1,
 .sec2,
 .sec3,
@@ -1391,10 +1400,8 @@ a {
 
 @media (min-width: 769px) {
   .about-container .right-about {
-    background-color: yellow;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: repeat(2, 300px);
     grid-template-areas: "myown myown course course" ".... learn learn ....";
   }
   .about-container .right-about .about-item {
