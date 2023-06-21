@@ -44,10 +44,14 @@
 .controlls.portfolio,
 .controlls.contact {
   position: fixed;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   justify-content: space-around;
-  top: 0;
-  left: 0;
-  width: 100%;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  width: inherit;
   flex-direction: row;
   overflow: hidden;
 }
@@ -60,8 +64,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    justify-content: center;
+    width: 100vw;
+    justify-content: space-around;
   }
 }
 .theme-switch-wrapper.home {
@@ -100,6 +104,9 @@
 }
 
 @media (min-width: 769px) {
+  .header {
+    max-width: 720px;
+  }
   .header .header-container {
     position: relative;
   }
@@ -110,6 +117,16 @@
     left: 0%;
     right: 5%;
     top: 5%;
+  }
+}
+@media (min-width: 992px) {
+  .header {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .header {
+    max-width: 1250px;
   }
 }
 @media (min-width: 768px) {
@@ -314,7 +331,7 @@ input:checked + .slider::before {
 }
 .about-container {
   margin-top: 9rem;
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100%;
 }
 .about-container .about-container_title {
@@ -343,7 +360,7 @@ input:checked + .slider::before {
   text-shadow: var(--color-blue) 1px 0 10px;
 }
 .about-container .about-container_info {
-  margin-top: 1rem;
+  margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -356,7 +373,7 @@ input:checked + .slider::before {
   color: var(--color-blue);
   text-align: center;
 }
-.about-container .about-container_info .left-about div {
+.about-container .about-container_info .left-about p {
   padding: 10px;
   text-align: justify;
   margin: 1rem 0;
@@ -367,14 +384,13 @@ input:checked + .slider::before {
   overflow: hidden;
   word-wrap: break-word;
 }
-.about-container .about-container_info .btn-con {
+.about-container .about-container_info .left-about .btn-con {
   color: var(--color-grey5);
-  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.about-container .about-container_info .btn-con__link {
+.about-container .about-container_info .left-about .btn-con__link {
   border-radius: 30px;
   color: var(--color-white);
   font-weight: 600;
@@ -384,10 +400,10 @@ input:checked + .slider::before {
   overflow: hidden;
   background-color: var(--color-grey5);
 }
-.about-container .about-container_info .btn-con__link__text {
+.about-container .about-container_info .left-about .btn-con__link__text {
   padding: 0 2rem;
 }
-.about-container .about-container_info .btn-con__link__icon {
+.about-container .about-container_info .left-about .btn-con__link__icon {
   background-color: var(--color-blue);
   display: flex;
   justify-content: center;
@@ -517,17 +533,11 @@ input:checked + .slider::before {
 }
 
 @media (min-width: 769px) {
-  .about-container {
-    margin: calc(3rem + 1vh);
-  }
   .about-container .about-container_title h2 {
     font-size: calc(3rem + 2vh);
   }
   .about-container .about-container_title h2 span {
     font-size: calc(3rem + 2vh);
-  }
-  .about-container .about-container_title .bg-text {
-    display: none;
   }
   .about-container .about-container_info .left-about h4 {
     font-size: calc(0.8rem + 2vh);
@@ -1263,6 +1273,7 @@ body {
   transition: all 0.4s ease-in-out;
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
   position: relative;
 }
 
@@ -1280,7 +1291,7 @@ a {
 .main-content {
   display: grid;
   grid-template-areas: "headerContainer" "aboutContainer" "portfoliosContainer" "contactContainer" "theme";
-  width: 100%;
+  width: 100vw;
   height: 100vh;
 }
 
@@ -1614,6 +1625,7 @@ body {
   transition: all 0.4s ease-in-out;
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
   position: relative;
 }
 
