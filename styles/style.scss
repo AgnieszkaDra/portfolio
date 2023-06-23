@@ -1,6 +1,10 @@
 
 $transition-main: all .4s ease-in-out;
 
+section, main {
+    position: relative;
+}
+
 @mixin flex() {
     display: flex;
     justify-content: center;
@@ -99,48 +103,51 @@ $br-sm-2: 14px;
     }
 }
 
-.theme-switch-wrapper.home {
+.theme-switch-wrapper.home, .theme-switch-wrapper.about, .theme-switch-wrapper.portfolio, .theme-switch-wrapper.contact{
 
     position: fixed;
-    @include flex();
-    right: 5%;
-    top: 3%;
+    display: flex;
+    justify-content: flex-end;
+    top: 15%;
     width: 100%;
     flex-direction: row;
 
-   
     span {
+
         margin-right: 10px;
         font-size: 1rem;
+
     }
 
     i {
+
         color: var(--color-grey4);
+
     }
 
 }
 
-// .theme-switch-wrapper.about, .theme-switch-wrapper.contact, .theme-switch-wrapper.portfolio {
+@media(min-width:768px) {
 
-//     position: fixed;
-//     display: flex;
-//     justify-content: center;
-//     top: 10%;
-//     left: 12%;
-//     width: 100%;
-//     flex-direction: row;
+    .theme-switch-wrapper.about, .theme-switch-wrapper.portfolio, .theme-switch-wrapper.contact {
 
-   
-//     span {
-//         margin-right: 10px;
-//         font-size: 1rem;
-//     }
+        position: fixed;
+        right: 10%;
+        top: 10%;
 
-//     i {
-//         color: var(--color-grey4);
-//     }
+    }
 
-// }
+}
+@media(min-width: 1000px) {
+
+    .theme-switch-wrapper.home, .theme-switch-wrapper.about, .theme-switch-wrapper.portfolio, .theme-switch-wrapper.contact {
+
+        right: 5%;
+        top: 15%;
+
+    }
+
+}
 
 @media(min-width:769px) {
 
@@ -185,18 +192,7 @@ $br-sm-2: 14px;
     }
 }
 
-@media(min-width:768px) {
 
-    .theme-switch-wrapper.about, .theme-switch-wrapper.portfolio, .theme-switch-wrapper.contact {
-
-        display: flex;
-        position: absolute;
-        right: 0;
-        top: 10%;
-
-    }
-
-}
 
 
 .toggle-text {
@@ -285,24 +281,6 @@ header, section {
     @include flex()
 
 }
-
-// header, section {
-
-//     width: 100%;
-//     padding-right: 15px;
-//     padding-left: 15px;
-//     margin-right: auto;
-//     margin-left: auto;
-
-// }
-
-// @media(max-width: 1000px) {
-
-//     header, section {
-//           padding-left: 0;
-//     }
-  
-// }
 
 .header-content {
 
@@ -1311,27 +1289,40 @@ header, section {
 }
 
 @media(min-width:769px) {
+
     .portfolio-container {
+
         .portfolios {
+
             .portfolio-item.myown {
+
                 .imagecon.two {
+
                     justify-content: flex-start;
+
                 }
+
             }
+
         }
+
     }
 
 }
 
 .contact-container {
+
     margin: calc(1rem + 1vh);
     margin-top: 6rem;
 
     .contact-title {
+
         margin-bottom: 3rem;
+
     }
 
     h2 {
+
         color: var(--color-sand);
         text-align: center;
         position: relative;
@@ -1340,9 +1331,11 @@ header, section {
         font-size: 700;
         z-index: 2;
         margin-top: 1rem;
+
     }
 
     .contact-content-con {
+
         display: flex;
         padding-top: 3.5rem;
         color: var(--color-blue);
@@ -1352,46 +1345,58 @@ header, section {
             flex: 2;
 
             h4 {
+
                 margin-top: 1rem;
                 font-size: 2rem;
                 text-transform: uppercase;
+
             }
 
             p {
+
                 margin: 1rem 0;
                 line-height: 2rem;
             }
 
             .contact-info {
+
                 padding: 2rem;
 
                 .contact-item {
+
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
 
                     p {
+
                         margin: .3rem 0 !important;
                         padding: 0 !important;
+
                     }
 
                     .icon {
+
                         display: grid;
                         grid-template-columns: 40px 1fr;
 
                         i {
+
                             display: flex;
                             align-items: center;
                             font-size: 1.3rem;
+
                         }
                     }
                 }
 
                 .contact-icon {
+
                     display: flex;
                     margin-top: 2rem;
 
                     a {
+                        
                         display: flex;
                         justify-content: center;
                         align-items: center;

@@ -49,6 +49,7 @@
     grid-template-columns: 0% 85% 15%;
     grid-template-areas:
         'invisible headerContent controlls';
+    
 
     .main-photo {
         grid-area: invisible;

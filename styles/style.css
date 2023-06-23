@@ -1,3 +1,7 @@
+section, main {
+  position: relative;
+}
+
 .controlls {
   display: flex;
   justify-content: space-around;
@@ -67,24 +71,35 @@
     justify-content: space-around;
   }
 }
-.theme-switch-wrapper.home {
+.theme-switch-wrapper.home, .theme-switch-wrapper.about, .theme-switch-wrapper.portfolio, .theme-switch-wrapper.contact {
   position: fixed;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  right: 5%;
-  top: 3%;
+  justify-content: flex-end;
+  top: 15%;
   width: 100%;
   flex-direction: row;
 }
-.theme-switch-wrapper.home span {
+.theme-switch-wrapper.home span, .theme-switch-wrapper.about span, .theme-switch-wrapper.portfolio span, .theme-switch-wrapper.contact span {
   margin-right: 10px;
   font-size: 1rem;
 }
-.theme-switch-wrapper.home i {
+.theme-switch-wrapper.home i, .theme-switch-wrapper.about i, .theme-switch-wrapper.portfolio i, .theme-switch-wrapper.contact i {
   color: var(--color-grey4);
 }
 
+@media (min-width: 768px) {
+  .theme-switch-wrapper.about, .theme-switch-wrapper.portfolio, .theme-switch-wrapper.contact {
+    position: fixed;
+    right: 10%;
+    top: 10%;
+  }
+}
+@media (min-width: 1000px) {
+  .theme-switch-wrapper.home, .theme-switch-wrapper.about, .theme-switch-wrapper.portfolio, .theme-switch-wrapper.contact {
+    right: 5%;
+    top: 15%;
+  }
+}
 @media (min-width: 769px) {
   .header {
     max-width: 720px;
@@ -109,14 +124,6 @@
 @media (min-width: 1200px) {
   .header {
     max-width: 1250px;
-  }
-}
-@media (min-width: 768px) {
-  .theme-switch-wrapper.about, .theme-switch-wrapper.portfolio, .theme-switch-wrapper.contact {
-    display: flex;
-    position: absolute;
-    right: 0;
-    top: 10%;
   }
 }
 .toggle-text {
@@ -1231,6 +1238,29 @@ a {
   text-decoration: underline;
 }
 
+.main-content {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    max-width: 720px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: 992px) {
+  .main-content {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-content {
+    max-width: 1250px;
+  }
+}
 .sec1,
 .sec2,
 .sec3,
@@ -1572,6 +1602,30 @@ a {
 
 .portfolio-link {
   text-decoration: underline;
+}
+
+.main-content {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    max-width: 720px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media (min-width: 992px) {
+  .main-content {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .main-content {
+    max-width: 1250px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
