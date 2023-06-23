@@ -526,6 +526,21 @@ header, section {
 }
 
 @media (min-width: 769px) {
+  .about {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .about {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1000px) {
+  .about {
+    max-width: 1250px;
+  }
+}
+@media (min-width: 769px) {
   .about-container .about-container_title h2 {
     font-size: calc(3rem + 2vh);
   }
@@ -587,9 +602,13 @@ header, section {
   }
 }
 .portfolio-container {
+  margin: 1rem;
   margin-top: 9rem;
   overflow-x: hidden;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .portfolio-container .portfolio-title {
   margin-bottom: 3rem;
@@ -1238,27 +1257,12 @@ a {
   text-decoration: underline;
 }
 
-.main-content {
-  width: 100%;
-}
-
 @media (min-width: 768px) {
   .main-content {
-    max-width: 720px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-  }
-}
-@media (min-width: 992px) {
-  .main-content {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .main-content {
-    max-width: 1250px;
   }
 }
 .sec1,
@@ -1386,11 +1390,17 @@ a {
 @media (min-width: 769px) {
   .portfolio-container .portfolios {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(5px, 1fr) minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, 10px minmax(200px, 1fr));
   }
   .portfolio-container .stars-break i:nth-child(2),
 .portfolio-container .stars-break i:nth-child(3) {
     display: none;
+  }
+}
+@media (min-width: 1000px) {
+  .portfolio-container .portfolios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 20px minmax(300px, 1fr));
   }
 }
 @media (min-width: 1000px) {
@@ -1604,27 +1614,12 @@ a {
   text-decoration: underline;
 }
 
-.main-content {
-  width: 100%;
-}
-
 @media (min-width: 768px) {
   .main-content {
-    max-width: 720px;
     padding-right: 15px;
     padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
-  }
-}
-@media (min-width: 992px) {
-  .main-content {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .main-content {
-    max-width: 1250px;
   }
 }
 

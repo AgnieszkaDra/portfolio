@@ -459,6 +459,8 @@ header, section {
 
 }
 
+
+
 .about-container {
 
     margin-top: 9rem;
@@ -751,9 +753,39 @@ header, section {
 
 @media(min-width: 769px) {
 
+    .about {
+
+        max-width: 720px;
+
+    }
+
+}
+
+@media(min-width: 992px) {
+
+    .about {
+
+        max-width: 960px;
+
+    }
+
+}
+
+
+@media(min-width: 1000px) {
+
+    .about {
+
+        max-width: 1250px;
+
+    }
+
+}
+
+@media(min-width: 769px) {
+
     .about-container {
        
-
         .about-container_title {
 
             h2 {
@@ -815,6 +847,8 @@ header, section {
         }
     }
 }
+
+
 
 @media(min-width: 1000px) {
 
@@ -889,9 +923,13 @@ header, section {
 
 .portfolio-container {
 
+    margin: 1rem;
     margin-top: 9rem;
     overflow-x: hidden;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 
     .portfolio-title {
 
