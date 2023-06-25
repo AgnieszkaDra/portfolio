@@ -37,63 +37,33 @@ console.log(sections)
 
 
 
-function forwardPage(e) {
+// function forwardPage(e) {
 
    
-    const id = e.target;
-    const header = id.closest('.header')
+//     const id = e.target;
+//     const header = id.closest('.header')
  
-    const page = document.querySelector('#portfolios')
-    const parentPage = page.parentElement.parentElement
+//     const page = document.querySelector('#portfolios')
+//     const parentPage = page.parentElement.parentElement
    
-    const controlPage = parentPage.querySelector('[data-id="portfolio"]')
+//     const controlPage = parentPage.querySelector('[data-id="portfolio"]')
   
-    const controlId = parentPage.querySelector('[data-id="home"]')
+//     const controlId = parentPage.querySelector('[data-id="home"]')
    
 
-    if (id) {
-        controlId.classList.remove('active-btn')
-        controlPage.classList.add('active-btn')
-        header.classList.remove('active')
-        parentPage.classList.add('active')
-    }
-}
+//     if (id) {
+//         controlId.classList.remove('active-btn')
+//         controlPage.classList.add('active-btn')
+//         header.classList.remove('active')
+//         parentPage.classList.add('active')
+//     }
+// }
 
-portfolioLink.addEventListener('click', forwardPage)
+// portfolioLink.addEventListener('click', forwardPage)
 
 const toogleSwitch = document.querySelector('input[type="checkbox"]')
 
-function darkMode() {
 
-    toggleIcon.children[0].textContent = 'Dark Mode'
-    toggleIcon.children[1].classList.remove('fa-sun')
-    toggleIcon.children[1].classList.add('fa-moon')
-
-}
-
-function lightMode() {
-
-    toggleIcon.children[0].textContent = 'Light Mode'
-    toggleIcon.children[1].classList.remove('fa-moon')
-    toggleIcon.children[1].classList.add('fa-sun')
-
-}
-
-
-function switchTheme(event) {
-   
-    if (event.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'light')
-        lightMode()
-
-    } else {
-        document.documentElement.removeAttribute('data-theme', 'light')
-        darkMode()
-    }
-}
-
-//Event Listener
-toogleSwitch.addEventListener('change', switchTheme)
 
 if (mql.matches) {
     toogleIcon.style.display = 'none'
