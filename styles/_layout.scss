@@ -74,6 +74,7 @@
 @media(min-width: 768px) {
 
     .header-container {
+
         width: 100%;
         height: 100vh;
         display: grid;
@@ -83,11 +84,14 @@
         overflow-y: hidden;
 
         .header-content {
+
             grid-area: headerContent;
             background-image: none;
+
         }
 
         .main-photo {
+
             grid-area: invisible;
             @include flex();
 
@@ -95,15 +99,19 @@
                 width: 100%;
                 height: 30vh;
             }
+
         }
 
         .controlls {
+
             grid-area: controlls;
+
         }
     }
 }
 
 @media(min-width:1000px) {
+
     .header-container {
 
         .main-photo {
@@ -123,20 +131,23 @@
 .about-container {
 
     .about-container .about-container_info .right-about {
+
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        // margin-top: 2.5rem;
-        // width: 100%;
+      
     }
 
     .invisible {
+
         grid-area: invisible;
 
         img {
+
             width: 0%;
             height: 0%;
+            
         }
     }
 

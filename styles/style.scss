@@ -997,18 +997,10 @@ header, section {
         .portfolio-item.myown {
 
             position: relative;
-
             border-radius: 15px;
 
-            // div{
-            //     display: grid;
-            //     grid-template-columns: repeat(2, 1fr);
-            // }
-
-
-
-
             .imagecon.two {
+
                 @include flex();
                 flex-direction: column;
                 background-color: var(--color-sand);
@@ -1016,19 +1008,24 @@ header, section {
                 height: 100%;
 
                 .imagecon-title {
+
                     font-size: calc(0.8rem + 1vh);
                     margin-bottom: 1rem;
+
                 }
 
                 .img-con {
+
                     color: var(--color-grey2);
                     text-decoration: wavy;
                     margin-bottom: 2rem;
 
                     img {
+
                         margin-top: 2rem;
                         width: 90%;
                         height: 90%;
+                        
                     }
                 }
             }
