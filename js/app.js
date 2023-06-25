@@ -30,11 +30,11 @@ const projectsAmountCourse = document.querySelector('.projectsAmountCourse')
 console.log(sections)
 
 
-// const result = pageTransitions(homeBtns, secHeader)
-// result(homeBtns, secHeader)
-// pageTransitions(aboutBtns, secAbout)
-// pageTransitions(portfolioBtns, secPortfolio)
-// pageTransitions(contactBtns, secContact)
+const result = pageTransitions(homeBtns, secHeader)
+result(homeBtns, secHeader)
+pageTransitions(aboutBtns, secAbout)
+pageTransitions(portfolioBtns, secPortfolio)
+pageTransitions(contactBtns, secContact)
 
 
 
