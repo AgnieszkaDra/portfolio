@@ -791,7 +791,15 @@
 
     <!-- <div class="badge-base LI-profile-badge" data-locale="pl_PL" data-size="medium" data-theme="light" data-type="HORIZONTAL" data-vanity="agnieszka-draganczyk-90aa65209" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://pl.linkedin.com/in/agnieszka-draganczyk-90aa65209?trk=profile-badge">Agnieszka Draganczyk</a></div> -->
 
-    <script type="module" src="js/app.js"></script>
+    <script type="module">
+        import {pageTransitions} from './js/functions/pageTransitions.js'
+
+        pageTransitions(homeBtns, secHeader)
+        pageTransitions(aboutBtns, secAbout)
+        pageTransitions(portfolioBtns, secPortfolio)
+        pageTransitions(contactBtns, secContact)
+    </script>
+    <script src="./js/app.js"></script>
     <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </body>
 

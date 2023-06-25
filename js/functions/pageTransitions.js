@@ -1,9 +1,9 @@
-console.log('fun')
-export default function pageTransitions (btns, sec) {
-    alert('transitions')
+
+export function pageTransitions (btns, sec) {
+   
     for (let i = 0; i < btns.length; i++) {
         btns[i].addEventListener('click', function () {
-            alert('click')
+            
             let currentBtn = sec.querySelectorAll('.active-btn')
             currentBtn[0].className = currentBtn[0].className.replace('active-btn', '')
             this.className += ' active-btn'
@@ -28,3 +28,5 @@ export default function pageTransitions (btns, sec) {
         }
     })
 }
+
+
